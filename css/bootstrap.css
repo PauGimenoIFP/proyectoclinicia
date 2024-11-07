@@ -51,6 +51,7 @@ html {
 body {
   margin: 0;
   margin-bottom: 40px;
+  height: 100vh;
 }
 footer {
   background-color: #5DADE2;

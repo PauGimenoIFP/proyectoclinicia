@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tickets eliminados</title>
+    <title>Mensajes</title>
     <link href="css/bootstrap.css" rel="stylesheet">
 </head>
 <body>
@@ -53,15 +53,26 @@
           </li>
         </ul>
       </div>
-      <div class="flex-shrink-0 p-3" id="contenedor-incidencia">
-        <div style="text-align: center;">
-          <h3>Tickets eliminados por administrador</h3>
+      <div id="chat-selection">
+        <div style="top: 10px; left: 5px; position: absolute">
+          <input type="text" class="form-control" id="floatingInput" placeholder="Escribe aquí..." size="40" maxlength="40">
         </div>
-        
+        <div class="flex-shrink-0 p-3" id="chat-min" style="top: 60px">
+          <h5>Falta de higiene en los baños</h5>
+        </div>
+        <div class="flex-shrink-0 p-3" id="chat-min" style="top: 180px">
+          <h5>Exigir cambio de comida</h5>
+        </div>
       </div>
-      <div class="flex-shrink-0 p-3" id="contenedor-incidencia" style="margin-left: 900px">
-        <div style="text-align: center;">
-          <h3>Tickets eliminados por anonimo</h3>
+      <div id="chat">
+        <div id="chat-message-client" style="top: 60px;">
+          <a>bottom text</a>
+        </div>
+        <div id="chat-message-admin" style="top: 10px">
+          <a>bottom text</a>
+        </div>
+        <div style="bottom: 10px; left: 10px; position: absolute">
+          <input type="text" class="form-control" id="floatingInput" placeholder="Escribe aquí..." size="111%">
         </div>
       </div>
 

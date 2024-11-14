@@ -4,6 +4,15 @@
  * Copyright 2011-2024 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+ @font-face {
+  font-family: 'Naste';
+  src: url('..font/Naste-Regular.woff2') format('woff2'),
+       url('..font/Naste-Regular.woff') format('woff'),
+       url('..font/Naste-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root,
 html {
   min-height: 100%;
@@ -98,6 +107,7 @@ body {
   margin: 0;
   margin-bottom: 40px;
   height: 100vh;
+  font-family: 'Naste', sans-serif;
 }
 footer {
   background-color: #5DADE2;

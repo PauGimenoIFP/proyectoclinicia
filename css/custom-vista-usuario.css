@@ -1,11 +1,11 @@
-/* Css para la pagina de Crear o buscar Incidencias*/
+/* Css para la pagina de Crear o buscar incidencias*/
 
 /* para visualizar mejor lo tamaños */
 * {
     border: 1px solid red;
 }
 
-.crearincidencia-content{
+.usuario-inicio-content{
     display: flex;
     height: 100%;
     width: 100%;
@@ -13,12 +13,12 @@
     align-items: center;
     padding: 5%;
 }
-.crearincidencia-opciones {
+.usuario-inicio-opciones {
     display: flex;
     flex-direction: column;
 }
 
-.crearincidencia-opciones button {
+.usuario-inicio-opciones button {
     background-color: #66c2ff;
     border-radius: 4px;
     height: 4em;
@@ -27,11 +27,11 @@
     text-align: center;
     color: black;
 }
-.crearincidencia-opciones button:hover {
+.usuario-inicio-opciones button:hover {
     background-color: #0056b3;
 }
 
-.crearincidencia-opciones input {
+.usuario-inicio-opciones input {
     height: 4em;
     width: 100%;
     color: #212529;
@@ -42,15 +42,15 @@
     border-radius: 4px;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
-.crearincidencia-opciones input:hover {
+.usuario-inicio-opciones input:hover {
     background-color: #0056b3;
 }
-.crearincidencia-opciones input::placeholder {
+.usuario-inicio-opciones input::placeholder {
     color: black;
     font-family: sans-serif;
     text-align: center;
 }
-.crearincidencia-opciones input:focus{
+.usuario-inicio-opciones input:focus{
     color: #212529;
     background-color: #fff;
     border-color: #86b7fe;
@@ -58,8 +58,37 @@
     box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
     text-align: center;
 }
-.crearincidencia-opciones input:focus::placeholder{
+.usuario-inicio-opciones input:focus::placeholder{
     color: white;
 }
 
+/* Usuario-Crearincidencias */
+.usuario-crearincincidencias-titulo{
+    display: block;
+    height: 15%;
+}
+.usuario-crearincincidencias-titulo h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
 
+}
+.usuario-crearincincidencias-box{
+    display: flex;
+    max-width: 100%;
+    height: 85%;
+    justify-content: space-around;
+    padding: 1em;
+}
+.usuario-crearincincidencias-col-1{
+    width: 32%;
+    display: block;
+}
+.usuario-crearincincidencias-col-2{
+    width: 32%;
+}
+.usuario-crearincincidencias-col-3{
+    width: 32%;
+
+}

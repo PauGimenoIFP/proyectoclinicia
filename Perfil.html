@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mensajes</title>
+  <title>Ajustes perfil</title>
   <link href="css/bootstrap.css" rel="stylesheet">
   <link href="css/estilos-propios.css" rel="stylesheet">
 </head>
@@ -35,7 +35,7 @@
         </div>
       </li>
       <li class="mb-1">
-        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false" style="margin-left: 60px">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" onclick="location.href='Mensajes.html'" style="margin-left: 60px">
           Mensajes
         </button>
       </li>
@@ -54,29 +54,15 @@
       </li>
     </ul>
   </div>
-  <div id="chat-selection">
-    <div style="top: 10px; left: 5px; position: absolute">
-      <input type="text" class="form-control" id="floatingInput" placeholder="Escribe aquí..." size=80%>
+  <div id="contenedor-Perfil">
+    <div id="margen-foto">
+      <img src="perfil-icono.png" width="100px" style="padding-bottom: 20px">
+      <a style="color:gray;"><BR>celiarg.clinica@hospital.com</a>
     </div>
-    <div class="flex-shrink-0 p-3" id="chat-min" style="top: 60px">
-      <h5>Falta de higiene en los baños</h5>
-    </div>
-    <div class="flex-shrink-0 p-3" id="chat-min" style="top: 180px">
-      <h5>Exigir cambio de comida</h5>
+    <div id="margen-texto-perfil">
+      <input type="text" class="form-control" id="floatingInput" placeholder="Escribe aquí...">
     </div>
   </div>
-  <div id="chat">
-    <div id="chat-message-client" style="top: 60px;">
-      <a>bottom text</a>
-    </div>
-    <div id="chat-message-admin" style="top: 10px">
-      <a>bottom text</a>
-    </div>
-    <div style="bottom: 10px; left: 10px; position: absolute">
-      <input type="text" class="form-control" id="floatingInput" placeholder="Escribe aquí..." size="101%">
-    </div>
-  </div>
-
   <footer>
   </footer>
   <script src="js/bootstrap.bundle.min.js"></script>

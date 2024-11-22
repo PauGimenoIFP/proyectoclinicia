@@ -14,18 +14,59 @@
     </div>
 
     <div class="usuario-crearincincidencias-box">
+
         <div class="usuario-crearincincidencias-col-1">
-            <input type="text">
-            <input type="text">
-            <input type="text">
-            <input type="text">
+           
+            <div class="vista-usuario-col-1-top">
+                <label for="vista-usuario-prioridad">Prioridad</label>
+                <input type="text" id="vista-usuario-prioridad">
+
+                <label for="vista-usuario-departamento">Departamento</label>
+                <input type="text" id="vista-usuario-departamento">    
+            </div>
+
+            <div class="vista-usuario-col-1-bot">
+                <label for="vista-usuario-nombre">Nombre</label>
+                <input type="text" id="vista-usuario-nombre">
+
+                <label for="vista-usuario-correo">Correo electronico</label>
+                <input type="text" id="vista-usuario-correo">    
+            </div>
+
         </div>
 
         <div class="usuario-crearincincidencias-col-2">
-            <input type="text">
-            <textarea name="" id="" cols="30" rows="10"></textarea>
+
+            <label for="vista-usuario-asunto">Asunto</label>
+            <input type="text" id="vista-usuario-asunto">
+
+            <label for="vista-usuario-detalle">Detalle</label>
+            <textarea id="vista-usuario-detalle"></textarea>
+
         </div>
+
         <div class="usuario-crearincincidencias-col-3">
+            
+            <div class="vista-usuario-col-3-top">
+                <h2>Código Incidencia</h2>
+                <p>ej:52415269856325874</p>
+            </div>
+            
+            <div class="vista-usuario-col-3-mid">
+                <label for="vista-usuario-adjuntos">Archivos Adjuntos</label>
+                <input type="file" id="vista-usuario-adjuntos" multiple>
+            </div>
+            
+            <div class="vista-usuario-col-3-bot">
+                <a href="/usuario-inicio.html">
+                    <button>Cancelar</button>
+                </a>
+                
+                <a href="vista-usuario-mostrar-codigo">
+                    <button>Crear y Enviar</button>
+                </a>
+            </div>
+            
 
         </div>
     </div>

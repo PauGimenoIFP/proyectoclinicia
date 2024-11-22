@@ -62,7 +62,9 @@
     color: white;
 }
 
+
 /* Usuario-Crearincidencias */
+
 .usuario-crearincincidencias-titulo{
     display: block;
     height: 15%;
@@ -83,12 +85,41 @@
 }
 .usuario-crearincincidencias-col-1{
     width: 32%;
+}
+.usuario-crearincincidencias-col-1 label,input{
     display: block;
+    text-align: center;
 }
 .usuario-crearincincidencias-col-2{
     width: 32%;
 }
+.usuario-crearincincidencias-col-2 label,input{
+    display: block;
+    text-align: center;
+
+}
 .usuario-crearincincidencias-col-3{
     width: 32%;
+}
+.usuario-crearincincidencias-col-3 label,input{
+    display: block;
+    text-align: center;
+}
 
+
+/* Separacion columnas*/
+.vista-usuario-col-1-top{
+    height: 50%;    
+}
+.vista-usuario-col-1-bot{
+    height: 50%;
+}
+.vista-usuario-col-3-top{
+    height: 33%;
+}
+.vista-usuario-col-3-mid{
+    height: 33%;
+}
+.vista-usuario-col-3-bop{
+    height: 33%;
 }

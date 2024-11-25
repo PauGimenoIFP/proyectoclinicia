@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear incidencia</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/custom-vista-usuario.css">
+</head>
+<body class="usuario-crearincincidencias">
+    
+    <div class="usuario-crearincincidencias-titulo">
+        <h1>Creador de incidencias</h1>
+    </div>
+
+    <div class="usuario-crearincincidencias-box">
+
+        <div class="usuario-crearincincidencias-col-1">
+           
+            <div class="vista-usuario-col-1-top">
+                <label for="vista-usuario-prioridad">Prioridad</label>
+                <input type="text" id="vista-usuario-prioridad">
+
+                <label for="vista-usuario-departamento">Departamento</label>
+                <input type="text" id="vista-usuario-departamento">    
+            </div>
+
+            <div class="vista-usuario-col-1-bot">
+                <label for="vista-usuario-nombre">Nombre</label>
+                <input type="text" id="vista-usuario-nombre">
+
+                <label for="vista-usuario-correo">Correo electronico</label>
+                <input type="text" id="vista-usuario-correo">    
+            </div>
+
+        </div>
+
+        <div class="usuario-crearincincidencias-col-2">
+
+            <label for="vista-usuario-asunto">Asunto</label>
+            <input type="text" id="vista-usuario-asunto">
+
+            <label for="vista-usuario-detalle">Detalle</label>
+            <textarea id="vista-usuario-detalle"></textarea>
+
+        </div>
+
+        <div class="usuario-crearincincidencias-col-3">
+            
+            <div class="vista-usuario-col-3-top">
+                <h2>Código Incidencia</h2>
+                <p>ej:52415269856325874</p>
+            </div>
+            
+            <div class="vista-usuario-col-3-mid">
+                <label for="vista-usuario-adjuntos">Archivos Adjuntos
+                    
+                    <input type="file" id="vista-usuario-adjuntos" multiple style="display: none;">
+                    
+                </label>
+                <div>
+
+                </div>
+            </div>
+            
+            <div class="vista-usuario-col-3-bot">
+
+                <a href="/usuario-inicio.html">Cancelar</a>
+                    
+                <a href="/usuario-mostrarcodigo.html">Crear y Enviar</a>
+            
+            </div>
+            
+
+        </div>
+    </div>
+
+</body>
+</html>

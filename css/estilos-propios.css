@@ -12,15 +12,32 @@
     min-height: 100%;
     position: relative;
   }
-  #margen-texto-perfil{
-    top: 250px;
+  #label-perfil{
+    margin-top: 10px; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+  }
+  #boton-perfil{
+    position: absolute; 
+    bottom: 20px; 
+    left: 41%;
+  }
+  #margen-texto-perfil1{
+    top: 260px;
     left: 100px;
+    position: absolute;
+  }
+  #margen-texto-perfil2{
+    top: 260px;
+    left: 600px;
     position: absolute;
   }
   #margen-foto{
     position: relative;
     text-align: center;
     top: 10%;
+    margin-right: 5%;
   }
   #contenedor-Perfil{
     background-color: #F2F3F4;
@@ -28,8 +45,8 @@
     left: 320px;
     width: 75%;
     height: 74%;
-    top: 13%;
-    position: absolute;
+    top: 15%;
+    position: fixed;
     border-radius: 5%;
   }
   #chat-message-client{

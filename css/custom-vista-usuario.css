@@ -11,6 +11,19 @@
     width: 100%;
     justify-content:center;
     align-items: center;
+/* Css para la pagina de Crear o buscar incidencias*/
+
+/* para visualizar mejor lo tamaños */
+* {
+    border: 1px;
+}
+
+.usuario-inicio-content{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content:center;
+    align-items: center;
     padding: 5%;
 }
 .usuario-inicio-opciones {
@@ -22,7 +35,17 @@
     background-color: #66c2ff;
     border-radius: 4px;
     height: 4em;
+.usuario-inicio-opciones {
+    display: flex;
+    flex-direction: column;
+}
+
+.usuario-inicio-opciones button {
+    background-color: #66c2ff;
+    border-radius: 4px;
+    height: 4em;
     width: 100%;
+    font-family: sans-serif;
     font-family: sans-serif;
     text-align: center;
     color: black;
@@ -41,7 +64,33 @@
     appearance: none;
     border-radius: 4px;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    color: black;
 }
+.usuario-inicio-opciones button:hover {
+    background-color: #0056b3;
+}
+
+.usuario-inicio-opciones input {
+    height: 4em;
+    width: 100%;
+    color: #212529;
+    background-color: #66c2ff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    appearance: none;
+    border-radius: 4px;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.usuario-inicio-opciones input:hover {
+    background-color: #0056b3;
+}
+.usuario-inicio-opciones input::placeholder {
+    color: black;
+    font-family: sans-serif;
+    text-align: center;
+}
+.usuario-inicio-opciones input:focus{
+    color: #212529;
 .usuario-inicio-opciones input:hover {
     background-color: #0056b3;
 }

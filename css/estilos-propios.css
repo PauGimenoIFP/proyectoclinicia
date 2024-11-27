@@ -1,0 +1,167 @@
+@font-face {
+    font-family: 'Naste';
+    src: url('..font/Naste-Regular.woff2') format('woff2'),
+         url('..font/Naste-Regular.woff') format('woff'),
+         url('..font/Naste-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  #incidencia{
+    width: 100%;
+    height: 30%;
+    background-color:#F2F3F4;
+    position: relative;
+    display: block;
+    border-radius: 10%;
+    overflow: auto;
+    padding-left: 5%;
+    padding-bottom: 10%;
+    padding-top: 10%;
+  }
+  :root,
+  html {
+    min-height: 100%;
+    position: relative;
+  }
+  #label-perfil{
+    margin-top: 10px; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+  }
+  #boton-perfil{
+    position: absolute; 
+    bottom: 20px; 
+    left: 41%;
+  }
+  #margen-texto-perfil1{
+    top: 260px;
+    left: 100px;
+    position: absolute;
+  }
+  #margen-texto-perfil2{
+    top: 260px;
+    left: 600px;
+    position: absolute;
+  }
+  #margen-foto{
+    position: relative;
+    text-align: center;
+    top: 10%;
+    margin-right: 5%;
+  }
+  #contenedor-Perfil{
+    background-color: #F2F3F4;
+    display: block;
+    left: 320px;
+    width: 75%;
+    height: 74%;
+    top: 15%;
+    position: fixed;
+    border-radius: 5%;
+  }
+  #chat-message-client{
+    background-color: #e0e0e0;
+    display: block;
+    left: 20px;
+    position: absolute;
+    border-radius: 15%;
+    padding: 8px;
+  }
+  #chat-message-admin{
+    background-color: #66c2ff;
+    display: block;
+    right: 20px;
+    position: absolute;
+    border-radius: 15%;
+    padding: 8px;
+  }
+  #chat{
+    background-color: #F2F3F4;
+    display: block;
+    left: 580px;
+    width: 60%;
+    height: 77%;
+    top: 100px;
+    position: fixed;
+    border-radius: 5%;
+  }
+  #chat-selection{
+    width: 19%;
+    height: 77%;
+    background-color:#F2F3F4;
+    position: fixed;
+    top: 100px;
+    display: block;
+    border-radius: 7%;
+    left:285px;
+    overflow: height;
+  }
+  #chat-min{
+    width: 88%;
+    height: 20%;
+    background-color:#82E0AA;
+    position: absolute;
+    top: 12px;
+    display: block;
+    border-radius: 10%;
+    left: 12px;
+  }
+  #contenedor-incidencia{
+    width: 30%;
+    height: 65%;
+    background-color:#82E0AA;
+    position: fixed;
+    top: 150px;
+    display: block;
+    border-radius: 10%;
+    left:340px;
+    overflow: auto;
+  }
+  .barra_busqueda {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    left:400px;
+    display: block;
+    width: 50%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    background-clip: padding-box;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius: 30px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  #sidebar{
+    position: fixed;
+    top: 80px;
+    width: 300px;
+    left: -30px;
+    background-color:#F2F3F4;
+    height: 85%;
+    border-radius: 10%;
+  }
+  body {
+    margin: 0;
+    margin-bottom: 40px;
+    height: 100vh;
+    font-family: 'Naste', sans-serif;
+  }
+  footer {
+    background-color: #5DADE2;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+  }
+  header {
+    background-color: #66c2ff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+  }

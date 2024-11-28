@@ -97,6 +97,45 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Mostrar en la consola (para depuración)
         console.log('Incidencias guardadas:', incidencias);
+
+    });
+
+    let codigo = document.getElementById('buscador');
+    let buscar = document.getElementById('accionar-buscar');
+
+    buscar.addEventListener('click', () => {
+        console.log('boton buscar');
+
+    let codigoBuscado = codigo.value.trim();
+
+    let resultado = incidencias.find(inc => inc.code === codigoBuscado);
+
+    if (resultado) {
+        // Si se encuentra la incidencia, mostrarla en el HTML
+        console.log("Incidencia encontrada:", resultado);
+        
+        // Crear un HTML dinámico para mostrar los detalles de la incidencia
+        resultadoBusqueda.innerHTML = `
+            <h3>Incidencia Encontrada</h3>
+            <p><strong>Código:</strong> ${resultado.code}</p>
+            <p><strong>Asunto:</strong> ${resultado.asunto}</p>
+            <p><strong>Detalle:</strong> ${resultado.detalle}</p>
+            <p><strong>Prioridad:</strong> ${resultado.prioridad}</p>
+            <p><strong>Departamento:</strong> ${resultado.departamento}</p>
+            <p><strong>Nombre:</strong> ${resultado.nombre}</p>
+            <p><strong>Email:</strong> ${resultado.email}</p>
+        `;
+    } else {
+        // Si no se encuentra la incidencia, mostrar un mensaje en el HTML
+        console.log("No se encontró la incidencia.");
+        resultadoBusqueda.innerHTML = `
+            <p>No se encontró ninguna incidencia con ese código.</p>
+        `;
+    }
+    
+
+
+    
     });
     console.log('Incidencias guardadas:', incidencias);
 });

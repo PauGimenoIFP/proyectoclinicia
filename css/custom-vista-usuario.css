@@ -229,17 +229,19 @@ header{
 .usuario-inicio-opciones {
     display: flex;
     flex-direction: column;
+    width: 20%;
 }
 
 .usuario-inicio-opciones button {
     background-color: #66c2ff;
     border-radius: 4px;
-    height: 4em;
+    height: 6em;
     width: 100%;
     font-family: sans-serif;
     font-family: sans-serif;
     text-align: center;
     color: black;
+    margin: 4px;
 }
 .usuario-inicio-opciones button:hover {
     background-color: #0056b3;
@@ -301,4 +303,33 @@ header{
 }
 .usuario-inicio-opciones input:focus::placeholder{
     color: white;
+}
+
+.mostrar-incidencia{
+    width: 50%;
+    height: 50%;
+    display: block;
+    padding: 1em;
+    background-color: #66c2ff;
+    border-radius: 10px;
+    box-shadow: rgb(0 0 0 / 12%) 0px 1px 3px, rgb(0 0 0 / 24%) 0px 1px 2px;
+}
+.mostrar-incidencia input{
+    display: block;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgb(0 0 0 / 12%) 0px 1px 3px, rgb(0 0 0 / 24%) 0px 1px 2px;
+}
+.mostrar-incidencia button {
+    display: block;
+    margin: auto;
+    width: 50%;
+    height: 10%;
+    background-color: rgb(52, 146, 209);
+    border-radius: 10px;
+    box-shadow: rgb(0 0 0 / 12%) 0px 1px 3px, rgb(0 0 0 / 24%) 0px 1px 2px;
+}
+.resultados{
+    height: fit-content;
 }

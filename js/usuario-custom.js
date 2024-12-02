@@ -193,5 +193,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
     });
     console.log('Incidencias guardadas:', incidencias);
+
+    let asunto_container = document.getElementById('asunto-incidencia')
+    asunto_container.innerHTML = (a)
 });
   

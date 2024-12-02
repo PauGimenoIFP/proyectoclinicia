@@ -1,10 +1,29 @@
 @font-face {
     font-family: 'Naste';
-    src: url('..font/Naste-Regular.woff2') format('woff2'),
-         url('..font/Naste-Regular.woff') format('woff'),
-         url('..font/Naste-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+    src: url('../font/Naste-Regular.ttf');   
+  }
+  #boton-incidencia1{
+    left: 70%;
+    top: 700px;
+    position: fixed;
+  }#boton-incidencia2{
+    left: 90%;
+    top: 700px;
+    position: fixed;
+  }
+  #archivos{
+    width: 32%;
+    height: 40%;
+    position: fixed;
+    left: 66%;
+    background-color: #F2F3F4;
+    display: flex;
+    border-radius: 10%;
+    top: 200px;
+    padding-left: 5%;
+    padding-bottom: 10%;
+    padding-top: 1%;
+    align-items: flex-start;
   }
   #incidencia{
     width: 100%;
@@ -13,10 +32,12 @@
     position: relative;
     display: block;
     border-radius: 10%;
-    overflow: auto;
     padding-left: 5%;
     padding-bottom: 10%;
     padding-top: 10%;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
   }
   :root,
   html {
@@ -77,9 +98,10 @@
     padding: 8px;
   }
   #chat{
+    padding: 20px;
     background-color: #F2F3F4;
     display: block;
-    left: 580px;
+    left: 39%;
     width: 60%;
     height: 77%;
     top: 100px;

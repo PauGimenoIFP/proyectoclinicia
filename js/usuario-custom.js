@@ -1,48 +1,103 @@
+// js compartido para acceder al array de Incidencias
 
-let incidencias = [];
+// Cada incidencia estara compuesta por:
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Array para almacenar las incidencias
-    
-  
-    // Seleccionar elementos del DOM
-    let asunto = document.getElementById('asunto');
-    let detalle = document.getElementById('detalle');
-
-    let prioridad = '';
-
-    let bajaRadio = document.getElementById('baja');
-    let mediaRadio = document.getElementById('media');
-    let altaRadio = document.getElementById('alta');
-    let urgenteRadio = document.getElementById('urgente');
-
-    if (bajaRadio.checked) {
-      prioridad = bajaRadio.value;
-    } else if (mediaRadio.checked) {
-      prioridad = mediaRadio.value;
-    } else if (altaRadio.checked) {
-      prioridad = altaRadio.value;
-    } else if (urgenteRadio.checked) {
-      prioridad = urgenteRadio.value;
-    }
-
-    let departamento = document.getElementById('departamento');
-    let nombre = document.getElementById('nombre');
-    let email = document.getElementById('email');
-    
-  
+// Codigo
     // Función para generar un código único
     let generateCode = () => {
         let timestamp = Date.now();
         let random = Math.floor(Math.random() * 90000) + 10000;  // Genera un número aleatorio de 5 dígitos
         return `INC-${timestamp}-${random}`;
     };
-  
-    let crear = document.getElementById('crear-incidencia');
-    // Manejar el clic en el botón
+// Asunto
+// Detalle
+// Prioridad
+// Departamento
+// Nombre (opcional)
+// Email (opcional)
 
-    crear.addEventListener('click', () => {
+let incidencias = [];
+
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // Condicional para que no choque con otras vistas
+    // Basicamente le doy una clase al body para seleccionarlo
+    if (document.body.classList.contains("usuario-crearincidencia")) {
+        
+        function crearincidencia(){
+        
+            // Como hice la prioridad diferente , usando radiales, o no se que cosa
+            // tengo que hacer esto para ver cual es el boton "pulsado"
+            
+            let prioridad = '';
+            // Miro cual tienen el atributo de cheked y lo capturo
+            if (bajaRadio.checked) {
+                prioridad = bajaRadio.value;
+            } else if (mediaRadio.checked) {
+                prioridad = mediaRadio.value;
+            } else if (altaRadio.checked) {
+                prioridad = altaRadio.value;
+            } else if (urgenteRadio.checked) {
+                prioridad = urgenteRadio.value;
+            }
+            // Me guardo los inputs en una variable para luego crear el objeto y meterlo en el array
+
+            let asunto = document.getElementById('asunto').value;
+            let detalle = document.getElementById('detalle').value;
+            let departamento = document.getElementById('departamento').value;
+            let nombre = document.getElementById('nombre').value;
+            let email = document.getElementById('email').value;
+            
+            let nuevaIncidencia = {
+                asunto: asunto,
+                detalle: detalle,
+                departamento: departamento,
+                nombre: nombre,
+                email: email,
+                code: generateCode() // El codigo lo generamos
+            };
+
+            // Agregar la nueva incidencia al array
+            incidencias.push(nuevaIncidencia);
+
+            // Limpiar los campos del formulario
+            document.getElementById('asunto').value = '';
+            document.getElementById('detalle').value = '';
+            document.getElementById('departamento').value = '';
+            document.getElementById('nombre').value = '';
+            document.getElementById('email').value = '';
+
+
+
+            console.log(incidencias);
+
+
+        }
+
+        // Captura del Boton de crear incidencia y su funcionalidad
+        let crear = document.getElementById('crear-incidencia');
+        
+        crear.addEventListener('click', () => {
         console.log('boton crear pulsado');
+
+
+        });
+
+
+    }
+});
+/*
+    // Seleccionar elementos del DOM
+    
+
+    
+
+    
+    
+  
+    
+  
+    
         
         // Obtener valores de los inputs
         let a = asunto.value.trim();
@@ -139,4 +194,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     console.log('Incidencias guardadas:', incidencias);
 });
-  

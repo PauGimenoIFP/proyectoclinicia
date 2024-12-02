@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tickets eliminados</title>
+    <title>Ticket abierto</title>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/estilos-propios.css" rel="stylesheet">
 </head>
 <body>
-  <header>
+    <header>
     <div>
       <div style="margin-top: 10px; margin-left:20px">
         <a href="inicioIncidencias.html">
@@ -16,8 +16,8 @@
         </a>
       </div>
     </div>
-  </header>
-    <div class="flex-shrink-0 p-3" id="sidebar">
+    </header>
+      <div class="flex-shrink-0 p-3" id="sidebar">
         <a class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
           <span class="fs-5 fw-semibold" style="margin-left: 60px"><img src="https://cdn-icons-png.flaticon.com/512/17/17654.png" width="20px" height="20px" style="margin-right: 10px">Barra lateral</span>
         </a>
@@ -52,25 +52,32 @@
             </div>
           </li>
         </ul>
-      </div>
-      <div class="flex-shrink-0 p-3" id="contenedor-incidencia">
-        <div style="text-align: center;">
-          <h3>Tickets eliminados por administrador</h3>
         </div>
-        <div id="incidencia" onclick="location.href='IncidenciaAbierta.html'" style="cursor: pointer;">
-          <h5>Seleccionable</h5>
+        <div id="chat" style="left: 20%; width: 40%;">
+          <label for="asunto" style="margin-left: 15px">Asunto:</label>
+          <input type="text" class="form-control" id="asunto" placeholder="Asunto ejemplo" size="20%" disabled>
+          <label for="descripcion" style="margin-left: 15px">Descripción:</label>
+          <textarea class="form-control" id="descripcion" disabled rows="12" cols="50">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis arcu sem. Nam in placerat dui, id convallis leo. Quisque accumsan nec orci eget porta. Sed pretium tortor sed est dictum, luctus lacinia mi bibendum. Morbi tincidunt, neque eu gravida dictum, orci lacus ullamcorper magna, ullamcorper luctus felis velit posuere urna. Ut tristique sit amet libero a lobortis. Integer finibus odio ac ex interdum vestibulum sed quis nisl. Duis congue euismod rhoncus. Duis lacinia enim at libero porta viverra. Mauris euismod orci quam, a efficitur nisl tempus at. Suspendisse fringilla magna quam, in tempus nibh feugiat sed. Praesent tincidunt pretium eros. Sed facilisis mauris vel sapien sagittis, id commodo nisl egestas. Aliquam velit urna, malesuada eu cursus non, eleifend ut libero.
+          </textarea>
+          <a>Creador: Anonimo<br><br></a>
+          <a>Departamento: General<br><br></a>
+          <a>Prioridad: Alta</a>
         </div>
-      </div>
-      <div class="flex-shrink-0 p-3" id="contenedor-incidencia" style="margin-left: 600px">
-        <div style="text-align: center;">
-          <h3>Tickets eliminados por anonimo</h3>
+        <div id="archivos">
+          <a>Archivos añadidos:</a>
+          <div style="margin-top: 15px; position: fixed;">
+            <img src="https://static.vecteezy.com/system/resources/previews/023/234/824/non_2x/pdf-icon-red-and-white-color-for-free-png.png" alt="" width="200px" height="200px">
+            <img src="https://static.vecteezy.com/system/resources/previews/023/234/824/non_2x/pdf-icon-red-and-white-color-for-free-png.png" alt="" width="200px" height="200px">
+          </div>
         </div>
-        <div id="incidencia" onclick="location.href='IncidenciaAbierta.html'" style="cursor: pointer;">
-          <h5>Lorem ipsum</h5>
+        <div id="boton-incidencia1">
+          <button class="btn btn-primary w-100 py-2" type="submit">Borrar</button>
+        </div> 
+        <div id="boton-incidencia2">
+          <button class="btn btn-primary w-100 py-2" type="submit">Completar</button>
         </div>
-      </div>
-      <footer>
-      </footer>
+        <footer>
+        </footer>
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

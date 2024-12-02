@@ -55,27 +55,16 @@
         <div class="contenido-2">
           
           <h3>Prioridad</h3>
-          <div class="contenido-2-checkbox">
+          <div>
             
-            <div>
-              <input id="baja" type="radio" class="form-check-input" name="prioridad">
-              <label class="form-check-label" for="baja">Baja</label>
-            </div>
-
-            <div>
-              <input id="media" type="radio" class="form-check-input" name="prioridad">
-              <label class="form-check-label" for="media">Media</label>
-            </div>
-
-            <div>
-              <input id="alta" type="radio" class="form-check-input" name="prioridad">
-              <label class="form-check-label" for="alta">Alta</label>
-            </div>
-
-            <div>
-              <input id="urgente" type="radio" class="form-check-input" name="prioridad">
-              <label class="form-check-label" for="urgente">Urgente</label>
-            </div>
+            <select class="form-select" id="prioridad" required="">
+              <option value="">Selecciona Prioridad</option>
+              <option>Baja</option>
+              <option>Media</option>
+              <option>Alta</option>
+              <option>Urgente</option>
+            </select>
+            <label for="prioridad" class="form-label"></label>
 
           </div>
 

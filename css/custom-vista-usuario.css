@@ -88,18 +88,7 @@ header{
     text-align: center;
     margin-bottom:1em;
 }
-.contenido-2-checkbox{
-    display: flex;
-    justify-content: space-around;
-}
-.contenido-2-checkbox div{
-    display: flex;
-    flex-direction: column;
-    width: fit-content;
-}
-.contenido-2-checkbox input{
-    margin: auto;
-}
+
 
 
 .contenido-3{

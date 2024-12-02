@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // tengo que hacer esto para ver cual es el boton "pulsado"
             
             let prioridad = '';
-    
+            // Miro cual tienen el atributo de cheked y lo capturo
             if (bajaRadio.checked) {
                 prioridad = bajaRadio.value;
             } else if (mediaRadio.checked) {
@@ -81,11 +81,11 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('boton crear pulsado');
 
 
-        )}
+        });
 
 
     }
-)};
+});
 /*
     // Seleccionar elementos del DOM
     
@@ -193,8 +193,4 @@ document.addEventListener('DOMContentLoaded', () => {
     
     });
     console.log('Incidencias guardadas:', incidencias);
-
-    let asunto_container = document.getElementById('asunto-incidencia')
-    asunto_container.innerHTML = (a)
 });
-  

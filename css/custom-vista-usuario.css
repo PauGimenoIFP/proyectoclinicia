@@ -322,3 +322,15 @@ header{
 .resultados{
     height: fit-content;
 }
+
+
+
+.fixed-issues{
+    position: fixed;
+    top: 30%;
+    left: 0%;
+    width: 20%;
+    height: 50%;
+    background-color: #5DADE2;
+
+  }

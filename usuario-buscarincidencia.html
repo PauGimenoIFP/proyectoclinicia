@@ -10,7 +10,7 @@
 
 </head>
 
-<body>
+<body class="usuario-buscarincidencia">
   <header>
     <div>
       <div style="margin-top: 10px; margin-left:20px">
@@ -21,70 +21,24 @@
     </div>
   </header>
 
-  <div class="mostrar-incidencia">
-    <input type="text" name="" id="buscador" placeholder="Ej: 465168454564564">
-    <button id="accionar-buscar" class="btn">Buscar</button>
-        <div class="resultados">
-            <div id="resultado" class="resultado-informacion">
-                <h3>Detalles de la Incidencia</h3>
-                <p><strong>Código:</strong> <span id="resultadoCodigo"></span></p>
-                <p><strong>Asunto:</strong> <span id="resultadoAsunto"></span></p>
-                <p><strong>Detalles:</strong> <span id="resultadoDetalle"></span></p>
-                <p><strong>Prioridad:</strong> <span id="resultadoPrioridad"></span></p>
-                <p><strong>Departamento:</strong> <span id="resultadoDepartamento"></span></p>
-                <p><strong>Nombre:</strong> <span id="resultadoNombre"></span></p>
-                <p><strong>Email:</strong> <span id="resultadoEmail"></span></p>
-            </div>
-            <div id="mensajeNoEncontrado" class="alert alert-danger" style="display: none;">
-                Código no encontrado.
-            </div>
-        </div>
+  <div class="fixed-issues">
+    <p>Campo forzado para mostrar los codigos</p>
     
+    <div id="codigos-forzados">
+
     </div>
-
-
-  <a href="usuario-inicio.html" id="boton-inicio">Inicio</a>
-
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/usuario-custom.js"></script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear incidencias</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/custom-vista-usuario.css">
-
-
-</head>
-
-<body>
-  <header>
-    <div>
-      <div style="margin-top: 10px; margin-left:20px">
-        <a href="index.html">
-          <img src="csf-horitzontal-removebg-preview.png" height="40px" weight="40px">
-        </a>
-      </div>
-    </div>
-  </header>
+  </div>
 
   <div class="mostrar-incidencia">
-    <input type="text" name="" id="buscador" placeholder="Ej: 465168454564564">
+    
+    <input type="number" name="" id="buscador" placeholder="Ej: 12345">
     <button id="accionar-buscar" class="btn">Buscar</button>
         <div class="resultados">
             <div id="resultado" class="resultado-informacion">
                 <h3>Detalles de la Incidencia</h3>
-                <p><strong>Código:</strong> <span id="resultadoCodigo"></span></p>
-                <p><strong>Asunto:</strong> <span id="resultadoAsunto"></span></p>
-                <p><strong>Detalles:</strong> <span id="resultadoDetalle"></span></p>
-                <p><strong>Prioridad:</strong> <span id="resultadoPrioridad"></span></p>
-                <p><strong>Departamento:</strong> <span id="resultadoDepartamento"></span></p>
-                <p><strong>Nombre:</strong> <span id="resultadoNombre"></span></p>
-                <p><strong>Email:</strong> <span id="resultadoEmail"></span></p>
+                <div id="resultado-busqueda">
+
+                </div>
             </div>
             <div id="mensajeNoEncontrado" class="alert alert-danger" style="display: none;">
                 Código no encontrado.

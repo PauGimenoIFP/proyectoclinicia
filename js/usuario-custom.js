@@ -1,4 +1,4 @@
-// js compartido para acceder al array de Incidencias
+// js Simulacion de backend
 
 // Cada incidencia estara compuesta por:
 
@@ -52,9 +52,40 @@ incidencias.push({
     nombre: "Carlos García",
     email: "carlos.garcia@example.com",
 });
+incidencias.push({
+    code: 44444,
+    estado: "Nuevo",
+    asunto: "Pantalla en negro",
+    detalle: "El monitor no muestra imagen al encender el equipo.",
+    prioridad: "Alta",
+    departamento: "Soporte Técnico",
+    nombre: "Laura Martínez",
+    email: "laura.martinez@example.com",
+});
+
+incidencias.push({
+    code: 55555,
+    estado: "Abierto",
+    asunto: "Solicitud de cambio de contraseña",
+    detalle: "El usuario olvidó su contraseña y no puede resetearla.",
+    prioridad: "Media",
+    departamento: "Atención al Cliente",
+    nombre: "Miguel Ángel",
+    email: "miguel.angel@example.com",
+});
+
+incidencias.push({
+    code: 66666,
+    estado: "Cerrado",
+    asunto: "Problema con el correo corporativo",
+    detalle: "El cliente reportó que no podía enviar correos, pero el problema ya fue resuelto.",
+    prioridad: "Baja",
+    departamento: "IT",
+    nombre: "Sofía Hernández",
+    email: "sofia.hernandez@example.com",
+});
 
 
-// !!! Un condicional por pagina/vista
 
 document.addEventListener('DOMContentLoaded', () => {
     
@@ -74,13 +105,14 @@ document.addEventListener('DOMContentLoaded', () => {
             let email = document.getElementById('email').value;
             
             let nuevaIncidencia = {
+                code: generarCodigo(), // El codigo lo generamos
+                estado: "Nuevo",
                 asunto: asunto,
                 detalle: detalle,
                 prioridad: prioridad,
                 departamento: departamento,
                 nombre: nombre,
-                email: email,
-                code: generarCodigo() // El codigo lo generamos
+                email: email  
             };
 
             // Agregar la nueva incidencia al array

@@ -10,7 +10,7 @@
 
 </head>
 
-<body>
+<body class="usuario-buscarincidencia">
   <header>
     <div>
       <div style="margin-top: 10px; margin-left:20px">
@@ -21,19 +21,24 @@
     </div>
   </header>
 
+  <div class="fixed-issues">
+    <p>Campo forzado para mostrar los codigos</p>
+    
+    <div id="codigos-forzados">
+
+    </div>
+  </div>
+
   <div class="mostrar-incidencia">
-    <input type="text" name="" id="buscador" placeholder="Ej: 465168454564564">
+    
+    <input type="number" name="" id="buscador" placeholder="Ej: 12345">
     <button id="accionar-buscar" class="btn">Buscar</button>
         <div class="resultados">
             <div id="resultado" class="resultado-informacion">
                 <h3>Detalles de la Incidencia</h3>
-                <p><strong>Código:</strong> <span id="resultadoCodigo"></span></p>
-                <p><strong>Asunto:</strong> <span id="resultadoAsunto"></span></p>
-                <p><strong>Detalles:</strong> <span id="resultadoDetalle"></span></p>
-                <p><strong>Prioridad:</strong> <span id="resultadoPrioridad"></span></p>
-                <p><strong>Departamento:</strong> <span id="resultadoDepartamento"></span></p>
-                <p><strong>Nombre:</strong> <span id="resultadoNombre"></span></p>
-                <p><strong>Email:</strong> <span id="resultadoEmail"></span></p>
+                <div id="resultado-busqueda">
+
+                </div>
             </div>
             <div id="mensajeNoEncontrado" class="alert alert-danger" style="display: none;">
                 Código no encontrado.

@@ -1,21 +1,39 @@
 /* Configuracion general para todas las vistas */
 body{
+    display: flex;
+    flex-direction: column;
     height: 100vh;
 }
 header{
+    display: flex;
+    align-items: center;
     height: 8%;
     background-color: #66c2ff;
 }
-header img{
+header a{
+    width: 100%;
     height: 100%;
-    padding: 6px;
+    display: flex;
+    align-items: center;
+}
+header img{
+    height: 80%;
+}
+section{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 footer{
+    display: flex;
+    align-items: end;
     height: 5%;
-    position: absolute;
-    bottom: 0;
     width: 100%;
     background-color: #66c2ff;
+}
+* {
+    box-sizing: border-box;
 }
 
 /* Configuracion de bordes para ayuda visual */
@@ -23,3 +41,39 @@ footer{
     border: 1px solid;
 }
 
+
+
+
+/* Displays de las sections*/
+#usuario-inicio{
+    display: ;
+}
+#usuario-crearincidencia{
+    display: none;
+}
+#usuario-buscarincidencia{
+    display: none;
+}
+
+/* Section usuario-inicio */
+#usuario-inicio button {
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    border: none;
+    padding: 0 56px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 7px;
+    background-color: #66c2ff;
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    box-shadow: 0 4px 14px 0 rgb(0 118 255 / 39%);
+    transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#usuario-inicio button:hover {
+    background: rgba(0, 118, 255, 0.9);
+    box-shadow: 0 6px 20px rgb(0 118 255 / 23%);
+}

@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ir_crearincidencia.addEventListener('click', function() {
             console.log('Boton ir crear incidencia');
             section_inicio.style.display = 'none';
-            section_crearincidencia.style.removeProperty('display');
+            section_crearincidencia.style.display = 'flex';
         });
 
         ir_buscarincidencia.addEventListener('click', function() {

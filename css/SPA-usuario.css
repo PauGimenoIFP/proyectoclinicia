@@ -27,14 +27,12 @@ section{
 }
 footer{
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     height: 5%;
     width: 100%;
     background-color: #66c2ff;
 }
-* {
-    box-sizing: border-box;
-}
+
 
 /* Configuracion de bordes para ayuda visual */
 * {
@@ -45,11 +43,14 @@ footer{
 
 
 /* Displays de las sections */
+#usuario-inicio{
+    display: none;
+}
 #usuario-crearincidencia{
     display: none;
 }
 #usuario-buscarincidencia{
-    display: none;
+    /*display: none;*/
 }
 
 
@@ -58,7 +59,6 @@ footer{
 /* Section usuario-inicio */
 #usuario-inicio button {
     display: inline-block;
-    outline: 0;
     cursor: pointer;
     border: none;
     padding: 0 56px;
@@ -70,12 +70,11 @@ footer{
     font-weight: 400;
     font-size: 16px;
     box-shadow: 0 4px 14px 0 rgb(0 118 255 / 39%);
-    transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 }
 
 #usuario-inicio button:hover {
     background: rgba(0, 118, 255, 0.9);
-    box-shadow: 0 6px 20px rgb(0 118 255 / 23%);
+    box-shadow: 0 6px 20px rgba(0, 118, 255, 0.23);
 }
 
 
@@ -112,17 +111,13 @@ footer{
     margin: auto;
     text-align: center;
     width: 100%;
-    padding: 43x;
-    box-sizing: border-box;
     margin-bottom: 10px;
     border-radius: 4px;
     border: 2px solid transparent;
-    box-shadow: rgb(0 0 0 / 12%) 0px 1px 3px, rgb(0 0 0 / 24%) 0px 1px 2px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
     background: rgb(251, 251, 251);
     transition: all 0.1s ease 0s;
 }
-
-
 .contenido-2{
     display: block;
     width: 70%;
@@ -137,9 +132,6 @@ footer{
     text-align: center;
     margin-bottom:1em;
 }
-
-
-
 .contenido-3{
     display: block;
     width: 70%;
@@ -155,9 +147,7 @@ footer{
     border-radius: 5px; 
     font-size: 16px;
     transition: all 0.3s ease;
-    border-radius: 5px;
     background: #66c2ff;
-    border-radius: 5px;
     box-shadow:  5px 5px 10px #5bade3, -5px -5px 10px #71d7ff;
     margin: 1em;
 }
@@ -176,15 +166,11 @@ footer{
     box-shadow: rgb(0 0 0 / 12%) 0px 1px 3px, rgb(0 0 0 / 24%) 0px 1px 2px;
     background: rgb(251, 251, 251);
 }
-
-
 .contenido-4{
     display: block;
     width: 70%;
     margin: auto;
 }
-
-
 .contenido-5{
     display: block;
     width: 70%;
@@ -201,9 +187,7 @@ footer{
     width: 90%;
     height: 4em;
     transition: all 0.3s ease;
-    border-radius: 5px;
     background: #66c2ff;
-    border-radius: 5px;
     box-shadow:  5px 5px 10px #5bade3, -5px -5px 10px #71d7ff;
     margin:1em;
 }
@@ -219,9 +203,7 @@ footer{
     width: 90%;
     height: 4em;
     transition: all 0.3s ease;
-    border-radius: 5px;
     background: #66c2ff;
-    border-radius: 5px;
     box-shadow:  5px 5px 10px #5bade3, -5px -5px 10px #71d7ff;
     margin: 1em;
 }
@@ -229,11 +211,36 @@ footer{
     background: #66c2ff;
     box-shadow: inset 15px 15px 30px #56a3d6, inset -15px -15px 30px #76e1ff;
 }
-
-
 .contenido-6{
     display: block;
     width: 70%;
     margin: auto;
     text-align: center;
+}
+
+
+
+
+/*  section usuario-buscarincidencia  */
+.buscarincidencia-container{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 90%;
+    margin: 1em;
+}
+.buscarincidencia-container-1{
+    height: 15%;
+}
+.buscarincidencia-container-bot{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+.buscarincidencia-container-2{
+    width: 70%;
+}
+.buscarincidencia-container-3{
+    width: 30%;
 }

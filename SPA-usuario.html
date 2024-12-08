@@ -5,179 +5,199 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clinica Sagrada familia</title>
 
-    <link rel="stylesheet" href="css/spa-usuario.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/spa-usuario.css">
 
 </head>
 
 <body>
-    <header>
-        <a href="usuario-inicio.html">
-            <img src="csf-horitzontal-removebg-preview.png">
-        </a>
-    </header>
+  <header>
+      <a id="logo">
+          <img src="csf-horitzontal-removebg-preview.png">
+      </a>
+  </header>
 
-    <section id="usuario-inicio">
-        <div>
+  <section id="usuario-inicio">
+      <div>
 
-            <button id="usuario-boton-crearincidencia">Crear Incidencia</button>
-            <button id="usuario-boton-buscarincidencia">Buscar Incidencia</button>
+          <button id="usuario-boton-crearincidencia">Crear Incidencia</button>
+          <button id="usuario-boton-buscarincidencia">Buscar Incidencia</button>
+
+      </div>
+  </section>
+
+  <section id="usuario-crearincidencia">
+
+    <div id="myCarousel" class="carousel slide mb-6">
+
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" class=""></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" class=""></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" class=""></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4" class=""></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="5" class=""></button>
+
+      </div>
+
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <div class="contenido-1">
+            
+            <div>
+              <label for="crearincidencia-asunto" class="form-label">Asunto</label>
+              <input type="text" id="asunto" required>
+            </div>
+
+            <div>
+              <label for="detalle" class="form-label">Detalles</label>
+              <textarea id="detalle" required class="form-control"></textarea>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="contenido-2">
+            
+            <h3>Prioridad</h3>
+            <div>
+              
+              <select class="form-select" id="prioridad" required="">
+                <option value="">Selecciona Prioridad</option>
+                <option>Baja</option>
+                <option>Media</option>
+                <option>Alta</option>
+                <option>Urgente</option>
+              </select>
+              <label for="prioridad" class="form-label"></label>
+
+            </div>
+
+            <h3>Departamento Destino</h3>
+            <div>
+              
+              <select class="form-select" id="departamento" required="">
+                <option value="">Selecciona departamento</option>
+                <option>Departamento 1</option>
+                <option>Departamento 2</option>
+                <option>Departamento 3</option>
+                <option>Departamento 4</option>
+              </select>
+              <label for="departamento" class="form-label"></label>
+
+            </div>
+
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="contenido-3">
+            
+            <div>
+              <label for="adjuntos" class="btn">
+                <h3>Deseas adjuntar archivos?</h3>
+                <input type="file" id="adjuntos" multiple style="display: none;">
+              </label>
+            </div>
+
+            <div class="adjuntos-preview">
+              Nada Seleccionado
+            </div>
+
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="contenido-4">
+            
+            <h4>Quieres identificarte?</h4>
+            <h6>Opcional*</h6>
+            
+            <div>
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombre" placeholder="Ej: Maria Teresa" required="">
+              
+              <label for="email" class="form-label">Email <span class="text-body-secondary">(Optional)</span></label>
+              <input type="email" class="form-control" id="email" placeholder="you@example.com">
+            </div>
+
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="contenido-5">
+            <div>
+              <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Next</span>
+                <button id="crear-incidencia" class="btn-creado">Crear</button> 
+              </button>
+                
+            </div>
+
+            <div>
+              <button class="btn-cancelado">Cancelar</button>
+            </div>
+            
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="contenido-6">
+            
+            <h3>Guarda tu Código!</h3>
+            <div id="mostrar-codigo"></div>
+            
+          </div>
+        </div>
+
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+      
+  </section>
+
+  <section id="usuario-buscarincidencia">
+
+    <div class="buscarincidencia-container">
+
+      <div class="buscarincidencia-container-1">
+        
+      </div>
+
+      <div class="buscarincidencia-container-bot">
+
+        <div class="buscarincidencia-container-2">
 
         </div>
-    </section>
+        <div class="buscarincidencia-container-3">
+        </div>
 
-    <section id="usuario-crearincidencia">
+      </div>
+      
 
-        <div id="myCarousel" class="carousel slide mb-6">
-    
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></button>
-              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" class=""></button>
-              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" class=""></button>
-              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" class=""></button>
-              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4" class=""></button>
-              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="5" class=""></button>
-        
-            </div>
-        
-            <div class="carousel-inner">
-        
-              <div class="carousel-item active">
-                <div class="contenido-1">
-                  
-                  <div>
-                    <label for="crearincidencia-asunto" class="form-label">Asunto</label>
-                    <input type="text" id="asunto" required>
-                  </div>
-        
-                  <div>
-                    <label for="detalle" class="form-label">Detalles</label>
-                    <textarea id="detalle" required class="form-control"></textarea>
-                  </div>
-        
-                </div>
-              </div>
-        
-              <div class="carousel-item">
-                <div class="contenido-2">
-                  
-                  <h3>Prioridad</h3>
-                  <div>
-                    
-                    <select class="form-select" id="prioridad" required="">
-                      <option value="">Selecciona Prioridad</option>
-                      <option>Baja</option>
-                      <option>Media</option>
-                      <option>Alta</option>
-                      <option>Urgente</option>
-                    </select>
-                    <label for="prioridad" class="form-label"></label>
-        
-                  </div>
-        
-                  <h3>Departamento Destino</h3>
-                  <div>
-                    
-                    <select class="form-select" id="departamento" required="">
-                      <option value="">Selecciona departamento</option>
-                      <option>Departamento 1</option>
-                      <option>Departamento 2</option>
-                      <option>Departamento 3</option>
-                      <option>Departamento 4</option>
-                    </select>
-                    <label for="departamento" class="form-label"></label>
-        
-                  </div>
-        
-                </div>
-              </div>
-        
-              <div class="carousel-item">
-                <div class="contenido-3">
-                  
-                  <div>
-                    <label for="adjuntos" class="btn">
-                      <h3>Deseas adjuntar archivos?</h3>
-                      <input type="file" id="adjuntos" multiple style="display: none;">
-                    </label>
-                  </div>
-        
-                  <div class="adjuntos-preview">
-                    Nada Seleccionado
-                  </div>
-        
-                </div>
-              </div>
-        
-              <div class="carousel-item">
-                <div class="contenido-4">
-                  
-                  <h4>Quieres identificarte?</h4>
-                  <h6>Opcional*</h6>
-                  
-                  <div>
-                    <label for="nombre" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="nombre" placeholder="Ej: Maria Teresa" required="">
-                    
-                    <label for="email" class="form-label">Email <span class="text-body-secondary">(Optional)</span></label>
-                    <input type="email" class="form-control" id="email" placeholder="you@example.com">
-                  </div>
-        
-                </div>
-              </div>
-        
-              <div class="carousel-item">
-                <div class="contenido-5">
-                  <div>
-                    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-                      <span class="carousel-control-next-icon"></span>
-                      <span class="visually-hidden">Next</span>
-                      <button id="crear-incidencia" class="btn-creado">Crear</button> 
-                    </button>
-                     
-                  </div>
-        
-                  <div>
-                    <button class="btn-cancelado">Cancelar</button>
-                  </div>
-                  
-                </div>
-              </div>
-        
-              <div class="carousel-item">
-                <div class="contenido-6">
-                  
-                  <h3>Guarda tu Código!</h3>
-                  <div id="mostrar-codigo"></div>
-                  
-                </div>
-              </div>
-        
-            </div>
-        
-            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-        
-          <a href="usuario-inicio.html" id="boton-inicio">Inicio</a>
-    </section>
+      
 
-    <section id="usuario-buscarincidencia">
+    </div>
 
-    </section>
+  </section>
 
 
 
-    <footer>
-        
-    </footer>
-    <script src="js/spa-usuario.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
+  <footer>
+      
+  </footer>
+  <script src="js/spa-usuario.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

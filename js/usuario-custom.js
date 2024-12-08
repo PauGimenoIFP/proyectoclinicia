@@ -219,16 +219,5 @@ document.addEventListener("DOMContentLoaded", () => {
     incidencias[1].asunto;
   document.getElementById("asunto-incidencia-2").textContent =
     incidencias[2].asunto;
-  const textarea = document.getElementById("descripcion");
-  if (textarea) {
-    // Asegúrate de que incidencias tenga datos
-    if (incidencias.length > 0) {
-      console.log(incidencias[0].detalle); // Revisión de datos
-      textarea.textContent = incidencias[0].detalle;
-    } else {
-      console.error("No hay incidencias disponibles");
-    }
-  } else {
-    console.error("El elemento con ID 'descripcion' no se encontró en el DOM");
-  }
+  document.getElementById("descripcion-0").textContent = incidencias[0].detalle;
 });

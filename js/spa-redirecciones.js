@@ -39,7 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
             section_buscarincidencia.style.display = "flex";
         });
         
-    
     //
 
 

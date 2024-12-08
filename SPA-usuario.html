@@ -12,16 +12,16 @@
 
 <body>
   <header>
-      <a id="logo">
-          <img src="csf-horitzontal-removebg-preview.png">
-      </a>
+    <a id="logo">
+      <img src="csf-horitzontal-removebg-preview.png">
+    </a>
   </header>
 
   <section id="usuario-inicio">
       <div>
 
-          <button id="usuario-boton-crearincidencia">Crear Incidencia</button>
-          <button id="usuario-boton-buscarincidencia">Buscar Incidencia</button>
+        <button id="usuario-boton-crearincidencia">Crear Incidencia</button>
+        <button id="usuario-boton-buscarincidencia">Buscar Incidencia</button>
 
       </div>
   </section>
@@ -31,6 +31,7 @@
     <div id="myCarousel" class="carousel slide mb-6">
 
       <div class="carousel-indicators">
+        
         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></button>
         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" class=""></button>
         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" class=""></button>
@@ -170,24 +171,74 @@
   <section id="usuario-buscarincidencia">
 
     <div class="buscarincidencia-container">
-
       <div class="buscarincidencia-container-1">
         
+        <label for="buscador">
+          <input type="text" required id="buscador"/>
+        </label>
+
+        <button id="accionar-buscar"><h6>Buscar</h6></button>
+        
+
       </div>
 
       <div class="buscarincidencia-container-bot">
 
         <div class="buscarincidencia-container-2">
 
+          <div>
+            <h6>Asunto:</h6>
+            <span id="buscarincidencia-asunto"></span>
+          </div>
+
+          <div>
+            <h6>Estado:</h6>
+            <span id="buscarincidencia-estado"></span>
+          </div>
+
+          <div>
+            <h6>Departamento:</h6>
+            <span id="buscarincidencia-departamento"></span>
+          </div>
+
+          <div>
+            <h6>Prioridad:</h6>
+            <span id="buscarincidencia-prioridad"></span>
+          </div>
+
+          <div>
+            <h6>Nombre:</h6>
+            <span id="buscarincidencia-nombre"></span>
+          </div>
+
+          <div>
+            <h6>Email:</h6>
+            <span id="buscarincidencia-email"></span>
+          </div>
+
+          <div>
+            <h6>Descripción:</h6>
+            <div id="buscarincidencia-detalle">
+
+            </div>
+          </div>
         </div>
+
         <div class="buscarincidencia-container-3">
+          
+          <h6>Adjuntos</h6>
+          <div id="buscarincidencia-adjuntos">
+            
+
+          </div>
+
+          <h6>Comentarios</h6>
+          <div id="buscarincidencia-comentarios">
+            
+          </div>
+
         </div>
-
       </div>
-      
-
-      
-
     </div>
 
   </section>
@@ -197,7 +248,8 @@
   <footer>
       
   </footer>
-  <script src="js/spa-usuario.js"></script>
+  <script src="js/spa-funciones.js"></script>
+  <script src="js/spa-redirecciones.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

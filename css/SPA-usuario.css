@@ -36,7 +36,7 @@ footer{
 
 /* Configuracion de bordes para ayuda visual */
 * {
-    border: 1px solid;
+    border: 1px ;
 }
 
 
@@ -222,25 +222,63 @@ footer{
 
 
 /*  section usuario-buscarincidencia  */
-.buscarincidencia-container{
+.buscarincidencia-container {
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 60%;
     height: 90%;
     margin: 1em;
 }
-.buscarincidencia-container-1{
+.buscarincidencia-container-1 {
     height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #F2F3F4;
+}
+.buscarincidencia-container-1 label{
+    height: 50%;
+    border-radius: 10px;
+    margin: 4px;
+}
+.buscarincidencia-container-1 input{
+    height: 100%;
+    border-radius: 10px;
 }
 .buscarincidencia-container-bot{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-grow: 1;
+    margin-top: 1em;
 }
 .buscarincidencia-container-2{
-    width: 70%;
+    width: 65%;
+    border-radius: 10px;
+    background-color: #F2F3F4;
+    padding: 1em;
+    margin-bottom: 4px;
+}
+.buscarincidencia-container-2 div{
+    display: inline;
 }
 .buscarincidencia-container-3{
-    width: 30%;
+    width: 33%;
+    border-radius: 10px;
+    padding: 1em;
+    background-color: #F2F3F4;
+    display: flex;
+    flex-direction: column;
+}
+#buscarincidencia-adjuntos{
+    height: 20%;
+    background-color: white;
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+#buscarincidencia-comentarios{
+    height: 40%;
+    background-color: white;
+    border-radius: 10px;
 }

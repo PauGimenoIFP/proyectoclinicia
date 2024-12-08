@@ -2,6 +2,24 @@
     font-family: 'Naste';
     src: url('../font/Naste-Regular.ttf');   
   }
+  #admin-login{
+    display: flex;
+  }
+  #admin-sidebar{
+    display: none;
+  }
+  #admin-inicio{
+    display: none;
+  }
+  #admin-hechas{
+    display: none;
+  }
+  .contenedor-login{
+    top: 25%; 
+    left: 20%;
+    position: absolute;
+    width: 60%;
+  }
   #boton-incidencia1{
     left: 70%;
     top: 700px;
@@ -130,7 +148,7 @@
     display: block;
     border-radius: 50px;
     left: 12px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   #contenedor-incidencia{
     width: 30%;
@@ -184,6 +202,7 @@
   body {
     margin: 0;
     height: 100vh;
+    flex-direction: column;
     font-family: 'Naste', sans-serif;
   }
   footer {

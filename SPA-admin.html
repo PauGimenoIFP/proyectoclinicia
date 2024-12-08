@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SPA admin</title>
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/estilos-propios.css" rel="stylesheet">
+    </head>
+   <body>
+    <header>
+        <div>
+            <div style="margin-top: 10px; margin-left:20px">          
+            <img src="csf-horitzontal-removebg-preview.png" height="40px" weight="40px">
+            </div>
+        </div>
+    </header>
+    <section id="admin-login">
+        <div class="contenedor-login">
+            <form id="loginForm">
+                <img class="mb-4" src="https://cdn-icons-png.flaticon.com/512/1160/1160622.png" alt="" width="57" height="57">
+                <h1 class="h3 mb-3 fw-normal">Inicia sesión</h1>
+                <div class="form-floating">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Correo electronico</label>
+                </div>
+                <div class="form-floating" style="margin-top: 20px; margin-bottom: 20px">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword">Contraseña</label>
+                </div>
+                <button id="entrarCuenta" class="btn btn-primary w-100 py-2" type="submit">Entrar a cuenta</button>
+            </form>
+        </div>
+    </section>
+    <section id="admin-sidebar">
+        <div class="flex-shrink-0 p-3" id="sidebar">
+            <a class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
+              <span class="fs-5 fw-semibold" style="margin-left: 60px"><img src="https://cdn-icons-png.flaticon.com/512/17/17654.png" width="20px" height="20px" style="margin-right: 10px">Barra lateral</span>
+            </a>
+            <ul class="list-unstyled ps-0">
+              <li class="mb-1">
+                <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true" style="margin-left: 60px">
+                  Incidencias
+                </button>
+                <div class="collapse show" id="home-collapse">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a id="inicioAdmin" href="inicioIncidencias.html" class="link-body-emphasis d-inline-flex text-decoration-none rounded" style="margin-left: 60px">Pendientes</a></li>
+                    <li><a id="hechasAdmin" href="IncidenciasHechas.html" class="link-body-emphasis d-inline-flex text-decoration-none rounded" style="margin-left: 60px">Hechas</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mb-1">
+                <button id="mensajesAdmin" class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" onclick="location.href='Mensajes.html'" style="margin-left: 60px">
+                  Mensajes
+                </button>
+              </li>
+              <li class="border-top my-3"></li>
+              <li class="mb-1">
+                <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false" style="margin-left: 60px">
+                  Ajustes
+                </button>
+                <div class="collapse" id="account-collapse">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a id="perfilAdmin" href="Perfil.html" class="link-body-emphasis d-inline-flex text-decoration-none rounded" style="margin-left: 60px">Perfil</a></li>
+                    <li><a id="loginAdmin" href="index.html" class="link-body-emphasis d-inline-flex text-decoration-none rounded" style="margin-left: 60px">Cerrar sesión</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+        </div>
+    </section>
+    <section id="admin-inicio" class="incidenciaabierta">
+        <div class="flex-shrink-0 p-3" id="contenedor-incidencia">
+            <div style="text-align: center;">
+                <h3>Nuevos tickets</h3>
+            </div>
+      
+            <div id="caja-incidencias-nuevas">
+            </div>
+      
+          </div>
+          <div class="flex-shrink-0 p-3" id="contenedor-incidencia" style="margin-left: 600px">
+            <div style="text-align: center;">
+                <h3>Tickets en proceso</h3>
+            </div>
+            <div id="caja-incidencias-abiertas">
+            </div>
+          </div>
+    </section>
+    <section id="admin-hechas">
+    </section>
+    <footer>
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/usuario-custom.js"></script>
+    <script src="js/SPA-admin.js"></script>
+
+</body>
+</html>

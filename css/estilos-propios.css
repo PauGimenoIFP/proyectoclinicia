@@ -39,6 +39,7 @@
     overflow: hidden; 
     text-overflow: ellipsis;
     margin: 6px;
+    cursor: pointer;
   }
   :root,
   html {

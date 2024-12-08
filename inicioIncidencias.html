@@ -7,7 +7,7 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/estilos-propios.css" rel="stylesheet">
 </head>
-<body>
+<body class="incidenciaabierta">
   <header>
     <div>
       <div style="margin-top: 10px; margin-left:20px">
@@ -55,10 +55,14 @@
       <div class="flex-shrink-0 p-3" id="contenedor-incidencia">
         <div style="text-align: center;">
           <h3>Nuevos tickets</h3>
-        </div>       
-        <div id="incidencia" onclick="location.href='IncidenciaAbierta.html'" style="cursor: pointer;">
-          <h5 id="asunto-incidencia-0"></h5>
         </div>
+
+        <div id="caja-incidencias-nuevas">
+          <div id="incidencia" onclick="location.href='IncidenciaAbierta.html'" style="cursor: pointer;">
+            <h5 id="asunto-incidencia-0"></h5>
+          </div>
+        </div>
+
       </div>
       <div class="flex-shrink-0 p-3" id="contenedor-incidencia" style="margin-left: 600px">
         <div style="text-align: center;">

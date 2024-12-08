@@ -25,7 +25,7 @@
     padding-top: 1%;
     align-items: flex-start;
   }
-  #incidencia{
+  .incidencia{
     width: 100%;
     height: 30%;
     background-color:#F2F3F4;
@@ -38,6 +38,7 @@
     white-space: nowrap; 
     overflow: hidden; 
     text-overflow: ellipsis;
+    margin: 6px;
   }
   :root,
   html {

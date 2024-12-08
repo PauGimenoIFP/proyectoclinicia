@@ -5,16 +5,16 @@
   #boton-incidencia1{
     left: 70%;
     top: 700px;
-    position: fixed;
+    position: absolute;
   }#boton-incidencia2{
     left: 90%;
     top: 700px;
-    position: fixed;
+    position: absolute;
   }
   #archivos{
     width: 32%;
     height: 35%;
-    position: fixed;
+    position: absolute;
     left: 66%;
     background-color: #F2F3F4;
     display: flex;
@@ -25,7 +25,7 @@
     padding-top: 1%;
     align-items: flex-start;
   }
-  #incidencia{
+  .incidencia{
     width: 100%;
     height: 30%;
     background-color:#F2F3F4;
@@ -38,6 +38,8 @@
     white-space: nowrap; 
     overflow: hidden; 
     text-overflow: ellipsis;
+    margin: 6px;
+    cursor: pointer;
   }
   :root,
   html {
@@ -53,23 +55,23 @@
   #boton-perfil{
     position: absolute; 
     bottom: 20px; 
-    left: 41%;
+    left: 42%;
   }
   #margen-texto-perfil1{
     top: 260px;
-    left: 100px;
+    left: 7%;
     position: absolute;
   }
   #margen-texto-perfil2{
     top: 260px;
-    left: 600px;
+    left: 60%;
     position: absolute;
   }
   #margen-foto{
     position: relative;
     text-align: center;
-    top: 10%;
     margin-right: 5%;
+    top: 10%;
   }
   #contenedor-Perfil{
     background-color: #F2F3F4;
@@ -78,7 +80,7 @@
     width: 75%;
     height: 74%;
     top: 15%;
-    position: fixed;
+    position: absolute;
     border-radius: 5%;
   }
   #chat-message-client{
@@ -105,14 +107,14 @@
     width: 60%;
     height: 77%;
     top: 100px;
-    position: fixed;
+    position: absolute;
     border-radius: 5%;
   }
   #chat-selection{
     width: 19%;
     height: 77%;
     background-color:#F2F3F4;
-    position: fixed;
+    position: absolute;
     top: 100px;
     display: block;
     border-radius: 7%;
@@ -133,11 +135,22 @@
     width: 30%;
     height: 65%;
     background-color:#82E0AA;
-    position: fixed;
+    position: absolute;
     top: 150px;
     display: block;
     border-radius: 10%;
     left:340px;
+    overflow: auto;
+  }
+  #contenedor-incidencia-Hecha{
+    width: 40%;
+    height: 65%;
+    background-color:#82E0AA;
+    position: absolute;
+    top: 150px;
+    display: block;
+    border-radius: 10%;
+    left: 35%;
     overflow: auto;
   }
   .barra_busqueda {
@@ -159,7 +172,7 @@
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   }
   #sidebar{
-    position: fixed;
+    position: absolute;
     top: 80px;
     width: 300px;
     left: -30px;
@@ -169,20 +182,19 @@
   }
   body {
     margin: 0;
-    margin-bottom: 40px;
     height: 100vh;
     font-family: 'Naste', sans-serif;
   }
   footer {
     background-color: #5DADE2;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     width: 100%;
-    height: 40px;
+    height: 48px;
   }
   header {
     background-color: #66c2ff;
-    position: fixed;
+    position: absolute;
     top: 0;
     width: 100%;
     height: 80px;

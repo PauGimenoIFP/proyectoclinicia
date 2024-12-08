@@ -30,7 +30,6 @@
               <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                 <li><a href="inicioIncidencias.html" class="link-body-emphasis d-inline-flex text-decoration-none rounded" style="margin-left: 60px">Pendientes</a></li>
                 <li><a href="IncidenciasHechas.html" class="link-body-emphasis d-inline-flex text-decoration-none rounded" style="margin-left: 60px">Hechas</a></li>
-                <li><a href="IncidenciasElim.html" class="link-body-emphasis d-inline-flex text-decoration-none rounded" style="margin-left: 60px">Eliminadas</a></li>
               </ul>
             </div>
           </li>
@@ -54,20 +53,24 @@
         </ul>
         </div>
         <div id="chat" style="left: 20%; width: 40%;">
-          <label for="asunto" style="margin-left: 15px">Asunto:</label>
-          <input type="text" class="form-control" id="asunto" placeholder="Asunto ejemplo" size="20%" disabled>
-          <label for="descripcion" style="margin-left: 15px">Descripción:</label>
-          <textarea class="form-control" id="descripcion" disabled rows="12" cols="50">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis arcu sem. Nam in placerat dui, id convallis leo. Quisque accumsan nec orci eget porta. Sed pretium tortor sed est dictum, luctus lacinia mi bibendum. Morbi tincidunt, neque eu gravida dictum, orci lacus ullamcorper magna, ullamcorper luctus felis velit posuere urna. Ut tristique sit amet libero a lobortis. Integer finibus odio ac ex interdum vestibulum sed quis nisl. Duis congue euismod rhoncus. Duis lacinia enim at libero porta viverra. Mauris euismod orci quam, a efficitur nisl tempus at. Suspendisse fringilla magna quam, in tempus nibh feugiat sed. Praesent tincidunt pretium eros. Sed facilisis mauris vel sapien sagittis, id commodo nisl egestas. Aliquam velit urna, malesuada eu cursus non, eleifend ut libero.
-          </textarea>
-          <a>Creador: Anonimo<br><br></a>
+          <a>Asunto:<br></a>
+          <a id="asunto-incidencia-0"></a>
+          <a style="margin-left: 15px"><br><br>Descripción:<br><br></a>
+          <a id="descripcion-0"></a>
+          <a><br><br>Creador: Anonimo<br><br></a>
           <a>Departamento: General<br><br></a>
-          <a>Prioridad: Alta</a>
+          <a>Prioridad: Alta<br><br></a>
+          <a>Estado de incidencia: Abierta</a>
         </div>
         <div id="archivos">
           <a>Archivos añadidos:</a>
-          <div style="margin-top: 15px; position: fixed;">
-            <img src="https://static.vecteezy.com/system/resources/previews/023/234/824/non_2x/pdf-icon-red-and-white-color-for-free-png.png" alt="" width="200px" height="200px">
-            <img src="https://static.vecteezy.com/system/resources/previews/023/234/824/non_2x/pdf-icon-red-and-white-color-for-free-png.png" alt="" width="200px" height="200px">
+          <div style="margin-top: 15px; position: absolute;">
+            <a href="Ejemplo-de-descarga-pdf.pdf" download="Ejemplo-de-descarga-pdf.pdf">
+              <img src="https://static.vecteezy.com/system/resources/previews/023/234/824/non_2x/pdf-icon-red-and-white-color-for-free-png.png" alt="" width="200px" height="200px">
+            </a>
+            <a href="Ejemplo-de-descarga-pdf.pdf" download="Ejemplo-de-descarga-pdf.pdf">
+              <img src="https://static.vecteezy.com/system/resources/previews/023/234/824/non_2x/pdf-icon-red-and-white-color-for-free-png.png" alt="" width="200px" height="200px">
+            </a>
           </div>
         </div>
         <div id="boton-incidencia1">
@@ -79,5 +82,6 @@
         <footer>
         </footer>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/usuario-custom.js"></script>
 </body>
 </html>

@@ -31,14 +31,14 @@
     background-color:#F2F3F4;
     position: relative;
     display: block;
-    border-radius: 10%;
+    border-radius: 100px;
     padding-left: 5%;
     padding-bottom: 10%;
     padding-top: 10%;
     white-space: nowrap; 
     overflow: hidden; 
     text-overflow: ellipsis;
-    margin: 6px;
+    margin-bottom: 6px;
     cursor: pointer;
   }
   :root,
@@ -128,8 +128,9 @@
     position: absolute;
     top: 12px;
     display: block;
-    border-radius: 10%;
+    border-radius: 50px;
     left: 12px;
+    margin-bottom: 20px;
   }
   #contenedor-incidencia{
     width: 30%;
@@ -178,7 +179,7 @@
     left: -30px;
     background-color:#F2F3F4;
     height: 85%;
-    border-radius: 10%;
+    border-radius: 50px;
   }
   body {
     margin: 0;

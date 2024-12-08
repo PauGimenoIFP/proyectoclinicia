@@ -44,13 +44,13 @@
                 </button>
                 <div class="collapse show" id="home-collapse">
                   <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                    <li><a id="inicioAdmin" href="inicioIncidencias.html" class="link-body-emphasis d-inline-flex text-decoration-none rounded" style="margin-left: 60px">Pendientes</a></li>
-                    <li><a id="hechasAdmin" href="IncidenciasHechas.html" class="link-body-emphasis d-inline-flex text-decoration-none rounded" style="margin-left: 60px">Hechas</a></li>
+                    <li><a id="inicioAdmin" class="link-body-emphasis d-inline-flex text-decoration-none rounded" style="margin-left: 60px; cursor: pointer">Pendientes</a></li>
+                    <li><a id="hechasAdmin" class="link-body-emphasis d-inline-flex text-decoration-none rounded" style="margin-left: 60px; cursor: pointer">Hechas</a></li>
                   </ul>
                 </div>
               </li>
               <li class="mb-1">
-                <button id="mensajesAdmin" class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" onclick="location.href='Mensajes.html'" style="margin-left: 60px">
+                <button id="mensajesAdmin" class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" style="margin-left: 60px; cursor: pointer">
                   Mensajes
                 </button>
               </li>
@@ -61,8 +61,8 @@
                 </button>
                 <div class="collapse" id="account-collapse">
                   <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                    <li><a id="perfilAdmin" href="Perfil.html" class="link-body-emphasis d-inline-flex text-decoration-none rounded" style="margin-left: 60px">Perfil</a></li>
-                    <li><a id="loginAdmin" href="index.html" class="link-body-emphasis d-inline-flex text-decoration-none rounded" style="margin-left: 60px">Cerrar sesión</a></li>
+                    <li><a id="perfilAdmin" class="link-body-emphasis d-inline-flex text-decoration-none rounded" style="margin-left: 60px; cursor: pointer">Perfil</a></li>
+                    <li><a id="loginAdmin" class="link-body-emphasis d-inline-flex text-decoration-none rounded" style="margin-left: 60px; cursor: pointer">Cerrar sesión</a></li>
                   </ul>
                 </div>
               </li>
@@ -79,7 +79,7 @@
             </div>
       
           </div>
-          <div class="flex-shrink-0 p-3" id="contenedor-incidencia" style="margin-left: 600px">
+          <div class="flex-shrink-0 p-3" id="contenedor-proceso">
             <div style="text-align: center;">
                 <h3>Tickets en proceso</h3>
             </div>
@@ -88,6 +88,61 @@
           </div>
     </section>
     <section id="admin-hechas">
+        <div class="flex-shrink-0 p-3" id="contenedor-incidencia-Hecha">
+            <div style="text-align: center;">
+              <h3>Tickets cerrados</h3>
+            </div>
+            <div id="incidencia" onclick="location.href='IncidenciaHecha.html'">
+              <h5 id="asunto-incidencia-2"></h5>
+            </div>
+        </div>
+    </section>
+    <section id="admin-mensajes">
+        <div id="chat-selection">
+            <div style="top: 10px; left: 5px; position: absolute">
+              <input type="text" class="form-control" id="floatingInput" placeholder="Escribe aquí..." size="26%">
+            </div>
+            <div class="flex-shrink-0 p-3" id="chat-min" style="top: 60px">
+              <h5>Falta de higiene en los baños</h5>
+            </div>
+            <div class="flex-shrink-0 p-3" id="chat-min" style="top: 180px">
+              <h5>Exigir cambio de comida</h5>
+            </div>
+          </div>
+          <div id="chat">
+            <div id="chat-messages" style="top: 10px; position: relative;">
+              <!-- Los mensajes aparecerán aquí -->
+            </div>
+            <div style="bottom: 10px; left: 10px; position: absolute">
+              <input type="text" class="form-control" id="floatingInput" placeholder="Escribe aquí..." size="121%" onkeypress="sendMessage(event)">
+            </div>
+        </div>
+    </section>
+    <section id="admin-perfil">
+        <div id="contenedor-Perfil">
+            <div id="margen-foto">
+              <img src="perfil-icono.png" width="100px" style="padding-bottom: 20px">
+              <a><br></a>
+              <a id="nombreUsuario" style="color:gray;">Celia</a>
+              <a><br></a>
+              <a id="correoUsuario" style="color:gray;">celiarg.clinica@hospital.com</a>
+            </div>
+            <div id="margen-texto-perfil1">
+              <label for="username" id="label-perfil" title="Nombre de usuario:">Nombre de usuario:</label>
+              <input type="text" class="form-control" id="username" placeholder="Nombre de usuario..." size="37%">
+              <label for="email" id="label-perfil" title="Correo electrónico:">Correo electrónico:</label>
+              <input type="email" class="form-control" id="email" placeholder="Correo electronico..." size="37%">
+            </div>
+            <div id="margen-texto-perfil2">
+              <label for="currentPassword" id="label-perfil" title="Contraseña actual (Obligatorio para pasar cualquier cambio):">Contraseña actual (Obligatorio para pasar cualquier cambio):</label>
+              <input type="password" class="form-control" id="currentPassword" placeholder="Contraseña actual..." size="37%">
+              <label for="newPassword" id="label-perfil" title="Contraseña nueva (opcional si no se quiere cambiar):">Contraseña nueva (opcional si no se quiere cambiar):</label>
+              <input type="password" class="form-control" id="newPassword" placeholder="Contraseña nueva..." size="37%">
+            </div>
+            <div id="boton-perfil">
+              <button class="btn btn-primary" type="button" onclick="cambiarDatos()">Cambiar los datos</button>
+            </div>
+          </div>
     </section>
     <footer>
     </footer>

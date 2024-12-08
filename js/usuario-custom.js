@@ -208,7 +208,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Espacio para las vistas de Admin
 
-  if (document.body.classList.contains("incidenciaabierta")) {
+  if (document.querySelector(".incidenciaabierta")) {
     function imprimirnuevo() {
       //imprimir incidencais nuevas
       let boxnuevas = document.getElementById("caja-incidencias-nuevas");

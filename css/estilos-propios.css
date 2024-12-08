@@ -4,6 +4,12 @@
   }
   #admin-login{
     display: flex;
+  } 
+  #admin-perfil{
+    display: none;
+  }
+  #admin-mensajes{
+    display: none;
   }
   #admin-sidebar{
     display: none;
@@ -149,6 +155,28 @@
     border-radius: 50px;
     left: 12px;
     margin-bottom: 10px;
+  }
+  #contenedor-nuevos{
+    width: 30%;
+    height: 65%;
+    background-color:#82E0AA;
+    position: absolute;
+    top: 150px;
+    display: block;
+    border-radius: 10%;
+    left:340px;
+    overflow: auto;
+  }
+  #contenedor-proceso{
+    width: 30%;
+    height: 65%;
+    background-color:#82E0AA;
+    position: absolute;
+    top: 150px;
+    display: block;
+    border-radius: 10%;
+    left:940px;
+    overflow: auto;
   }
   #contenedor-incidencia{
     width: 30%;

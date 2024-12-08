@@ -1,0 +1,25 @@
+/* Configuracion general para todas las vistas */
+body{
+    height: 100vh;
+}
+header{
+    height: 8%;
+    background-color: #66c2ff;
+}
+header img{
+    height: 100%;
+    padding: 6px;
+}
+footer{
+    height: 5%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #66c2ff;
+}
+
+/* Configuracion de bordes para ayuda visual */
+* {
+    border: 1px solid;
+}
+

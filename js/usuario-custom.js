@@ -15,8 +15,8 @@ let generarCodigo = () => {
 // Nombre (opcional)
 // Email (opcional)
 
+//Declaracion array
 let incidencias = [];
-
 console.log(incidencias);
 
 // Dejo unas incidencias estaticas para usar de ejemplo

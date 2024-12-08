@@ -194,7 +194,7 @@ header{
 
 
 
-/*     */
+/*  Pagina inicio   */
 
 
 .usuario-inicio-content{
@@ -294,6 +294,8 @@ header{
     color: white;
 }
 
+
+/* buscar incidencias */
 .mostrar-incidencia{
     width: 50%;
     height: 50%;
@@ -335,3 +337,11 @@ header{
 
 }
 
+*{
+    border: 1px solid;
+}
+
+.buscarincidencias-container{
+    height: 100%;
+    width: 100%;
+}

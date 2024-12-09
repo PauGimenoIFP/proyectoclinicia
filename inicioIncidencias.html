@@ -17,66 +17,59 @@
       </div>
     </div>
   </header>
-    <div class="flex-shrink-0 p-3" id="sidebar">
-        <a class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
-          <span class="fs-5 fw-semibold" style="margin-left: 60px"><img src="https://cdn-icons-png.flaticon.com/512/17/17654.png" width="20px" height="20px" style="margin-right: 10px">Barra lateral</span>
-        </a>
-        <ul class="list-unstyled ps-0">
-          <li class="mb-1">
-            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true" style="margin-left: 60px">
-              Incidencias
-            </button>
-            <div class="collapse show" id="home-collapse">
-              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                <li><a href="inicioIncidencias.html" class="link-body-emphasis d-inline-flex text-decoration-none rounded" style="margin-left: 60px">Pendientes</a></li>
-                <li><a href="IncidenciasHechas.html" class="link-body-emphasis d-inline-flex text-decoration-none rounded" style="margin-left: 60px">Hechas</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="mb-1">
-            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" onclick="location.href='Mensajes.html'" style="margin-left: 60px">
-              Mensajes
-            </button>
-          </li>
-          <li class="border-top my-3"></li>
-          <li class="mb-1">
-            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false" style="margin-left: 60px">
-              Ajustes
-            </button>
-            <div class="collapse" id="account-collapse">
-              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                <li><a href="Perfil.html" class="link-body-emphasis d-inline-flex text-decoration-none rounded" style="margin-left: 60px">Perfil</a></li>
-                <li><a href="index.html" class="link-body-emphasis d-inline-flex text-decoration-none rounded" style="margin-left: 60px">Cerrar sesión</a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="flex-shrink-0 p-3" id="contenedor-incidencia">
-        <div style="text-align: center;">
-          <h3>Nuevos tickets</h3>
-        </div>
-
-        <div id="caja-incidencias-nuevas">
-          <div id="incidencia" onclick="location.href='IncidenciaAbierta.html'" style="cursor: pointer;">
-            <h5 id="asunto-incidencia-0"></h5>
+  <div class="flex-shrink-0 p-3" id="sidebar">
+      <a class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
+        <span class="fs-5 fw-semibold" style="margin-left: 60px"><img src="https://cdn-icons-png.flaticon.com/512/17/17654.png" width="20px" height="20px" style="margin-right: 10px">Barra lateral</span>
+      </a>
+      <ul class="list-unstyled ps-0">
+        <li class="mb-1">
+          <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true" style="margin-left: 60px">
+            Incidencias
+          </button>
+          <div class="collapse show" id="home-collapse">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li><a href="inicioIncidencias.html" class="link-body-emphasis d-inline-flex text-decoration-none rounded" style="margin-left: 60px">Pendientes</a></li>
+              <li><a href="IncidenciasHechas.html" class="link-body-emphasis d-inline-flex text-decoration-none rounded" style="margin-left: 60px">Hechas</a></li>
+            </ul>
           </div>
-        </div>
-
-      </div>
-      <div class="flex-shrink-0 p-3" id="contenedor-incidencia" style="margin-left: 600px">
-        <div style="text-align: center;">
-          <h3>Tickets en proceso</h3>
-        </div>
-        <div>
-          <div id="incidencia" onclick="location.href='IncidenciaProceso.html'">
-            <h5 id="asunto-incidencia-1"></h5>
+        </li>
+        <li class="mb-1">
+          <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" onclick="location.href='Mensajes.html'" style="margin-left: 60px">
+            Mensajes
+          </button>
+        </li>
+        <li class="border-top my-3"></li>
+        <li class="mb-1">
+          <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false" style="margin-left: 60px">
+            Ajustes
+          </button>
+          <div class="collapse" id="account-collapse">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li><a href="Perfil.html" class="link-body-emphasis d-inline-flex text-decoration-none rounded" style="margin-left: 60px">Perfil</a></li>
+              <li><a href="index.html" class="link-body-emphasis d-inline-flex text-decoration-none rounded" style="margin-left: 60px">Cerrar sesión</a></li>
+            </ul>
           </div>
-        </div>
+        </li>
+      </ul>
+    </div>
+    <div class="flex-shrink-0 p-3" id="contenedor-incidencia">
+      <div style="text-align: center;">
+        <h3>Nuevos tickets</h3>
       </div>
 
-      <footer>
-      </footer>
+      <div id="caja-incidencias-nuevas">
+      </div>
+
+    </div>
+    <div class="flex-shrink-0 p-3" id="contenedor-incidencia" style="margin-left: 600px">
+      <div style="text-align: center;">
+        <h3>Tickets en proceso</h3>
+      </div>
+      <div id="caja-incidencias-abiertas">
+      </div>
+    </div>
+    <footer>
+    </footer>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/usuario-custom.js"></script>
 </body>

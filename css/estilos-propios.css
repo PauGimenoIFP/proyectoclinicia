@@ -2,6 +2,33 @@
     font-family: 'Naste';
     src: url('../font/Naste-Regular.ttf');   
   }
+  #admin-login{
+    display: flex;
+  } 
+  #admin-IncidenciaAbierta{
+    display: none;
+  }
+  #admin-perfil{
+    display: none;
+  }
+  #admin-mensajes{
+    display: none;
+  }
+  #admin-sidebar{
+    display: none;
+  }
+  #admin-inicio{
+    display: none;
+  }
+  #admin-hechas{
+    display: none;
+  }
+  .contenedor-login{
+    top: 25%; 
+    left: 20%;
+    position: absolute;
+    width: 60%;
+  }
   #boton-incidencia1{
     left: 70%;
     top: 700px;
@@ -31,14 +58,14 @@
     background-color:#F2F3F4;
     position: relative;
     display: block;
-    border-radius: 10%;
+    border-radius: 100px;
     padding-left: 5%;
     padding-bottom: 10%;
     padding-top: 10%;
     white-space: nowrap; 
     overflow: hidden; 
     text-overflow: ellipsis;
-    margin: 6px;
+    margin-bottom: 6px;
     cursor: pointer;
   }
   :root,
@@ -128,8 +155,31 @@
     position: absolute;
     top: 12px;
     display: block;
-    border-radius: 10%;
+    border-radius: 50px;
     left: 12px;
+    margin-bottom: 10px;
+  }
+  #contenedor-nuevos{
+    width: 30%;
+    height: 65%;
+    background-color:#82E0AA;
+    position: absolute;
+    top: 150px;
+    display: block;
+    border-radius: 10%;
+    left:340px;
+    overflow: auto;
+  }
+  #contenedor-proceso{
+    width: 30%;
+    height: 65%;
+    background-color:#82E0AA;
+    position: absolute;
+    top: 150px;
+    display: block;
+    border-radius: 10%;
+    left:940px;
+    overflow: auto;
   }
   #contenedor-incidencia{
     width: 30%;
@@ -178,11 +228,12 @@
     left: -30px;
     background-color:#F2F3F4;
     height: 85%;
-    border-radius: 10%;
+    border-radius: 50px;
   }
   body {
     margin: 0;
     height: 100vh;
+    flex-direction: column;
     font-family: 'Naste', sans-serif;
   }
   footer {

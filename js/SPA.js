@@ -91,9 +91,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // funciones para incidencias admin
   if (document.querySelector(".incidenciaabierta")) {
     function imprimirnuevo() {
-      //imprimir incidencais nuevas
+      //imprimir incidencias nuevas
       let boxnuevas = document.getElementById("caja-incidencias-nuevas");
-
+      boxnuevas.innerHTML = "";
       incidencias.forEach((incidencia) => {
         if (incidencia.estado === "Nuevo") {
           let nuevaIncidencia = document.createElement("div");
@@ -110,9 +110,9 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("estoy en incidencia abierta");
 
     function imprimirabierto() {
-      //imprimir incidencais nuevas
+      //imprimir incidencias abiertas
       let boxnuevas = document.getElementById("caja-incidencias-abiertas");
-
+      boxnuevas.innerHTML = "";
       incidencias.forEach((incidencia) => {
         if (incidencia.estado === "Abierto") {
           let nuevaIncidencia = document.createElement("div");
@@ -129,9 +129,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   if (document.querySelector(".incidenciahecha")) {
     function imprimirhecho() {
-      //imprimir incidencais nuevas
+      //imprimir incidencias hechas
       let boxnuevas = document.getElementById("caja-incidencias-hechas");
-
+      boxnuevas.innerHTML = "";
       incidencias.forEach((incidencia) => {
         if (incidencia.estado === "Cerrado") {
           let nuevaIncidencia = document.createElement("div");
@@ -326,6 +326,46 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(incidencias);
     myCarousel.next();
     crearincidencia();
+  });
+
+  // Agregar el evento para el botón "En proceso"
+  let botonProceso = document.getElementById("boton-proceso");
+
+  // Verificar el estado de la incidencia y mostrar/ocultar el botón
+  let incidenciaId = localStorage.getItem("incidenciaSeleccionada");
+  let incidencia = incidencias.find((inc) => inc.code == incidenciaId);
+
+  if (incidencia) {
+    if (incidencia.estado === "Nuevo") {
+      botonProceso.style.display = "block"; // Mostrar el botón si el estado es "Nuevo"
+    } else {
+      botonProceso.style.display = "none"; // Ocultar el botón si el estado no es "Nuevo"
+    }
+  }
+
+  // Agregar el evento para el botón "En proceso"
+  botonProceso.addEventListener("click", () => {
+    // Cambiar el estado a "Abierto" si la incidencia existe
+    if (incidencia) {
+      incidencia.estado = "Abierto";
+      console.log(
+        `Estado de la incidencia ${incidenciaId} cambiado a "Abierto"`
+      );
+    }
+  });
+
+  // Agregar el evento para el botón "Completar"
+  let botonCompletar = document.getElementById("boton-completar");
+
+  // Agregar el evento para el botón "Completar"
+  botonCompletar.addEventListener("click", () => {
+    // Cambiar el estado a "Cerrado" si la incidencia existe
+    if (incidencia) {
+      incidencia.estado = "Cerrado";
+      console.log(
+        `Estado de la incidencia ${incidenciaId} cambiado a "Cerrado"`
+      );
+    }
   });
 
   // ----------------------------------------------------------------- //

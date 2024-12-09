@@ -10,9 +10,12 @@
 
 </head>
 <body>
+  <div class="wave"></div>
+  <div class="wave"></div>
+  <div class="wave"></div>
 <header>
     <a id="logo">
-        <img src="csf-horitzontal-removebg-preview.png">
+        <img src="logo_blanco.png">
     </a>
 </header>
 
@@ -25,7 +28,7 @@
         </div>
 
         <div>
-            <button id="ir-adminlogin">Eres admin?</button>
+          <span id="ir-adminlogin">Eres admin?</span>
         </div>
 
     </section>
@@ -413,37 +416,37 @@
 
 <footer>
 </footer>
-    <script>
-        function cambiarDatos() {
-        const nombre = document.getElementById('username').value;
-        const correo = document.getElementById('email').value;
-        const contrasenaActual = document.getElementById('currentPassword').value;
+  <script>
+    function cambiarDatos() {
+    const nombre = document.getElementById('username').value;
+    const correo = document.getElementById('email').value;
+    const contrasenaActual = document.getElementById('currentPassword').value;
 
-        // Validar que los campos no estén vacíos y que se haya ingresado la contraseña
-        if (contrasenaActual === '' || (nombre === '' && correo === '')) {
-            alert('Por favor, complete todos los campos requeridos y asegúrese de ingresar la contraseña actual.');
-            return;
-        }
+    // Validar que los campos no estén vacíos y que se haya ingresado la contraseña
+    if (contrasenaActual === '' || (nombre === '' && correo === '')) {
+        alert('Por favor, complete todos los campos requeridos y asegúrese de ingresar la contraseña actual.');
+        return;
+    }
 
-        // Validar que el correo contenga una '@'
-        if (correo !== '' && !correo.includes('@')) {
-            alert('Por favor, ingrese un correo electrónico válido que contenga "@"');
-            return;
-        }
+    // Validar que el correo contenga una '@'
+    if (correo !== '' && !correo.includes('@')) {
+        alert('Por favor, ingrese un correo electrónico válido que contenga "@"');
+        return;
+    }
 
-        // Actualizar el texto de nombre y correo
-        if (nombre !== '') {
-            document.getElementById('nombreUsuario').innerText = nombre;
-        }
-        if (correo !== '') {
-            document.getElementById('correoUsuario').innerText = correo;
-        }
+    // Actualizar el texto de nombre y correo
+    if (nombre !== '') {
+        document.getElementById('nombreUsuario').innerText = nombre;
+    }
+    if (correo !== '') {
+        document.getElementById('correoUsuario').innerText = correo;
+    }
 
-        alert('Datos actualizados correctamente.');
-        }
-    </script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/SPA.js"></script>
+    alert('Datos actualizados correctamente.');
+    }
+  </script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/SPA.js"></script>
 
 </body>
 </html>

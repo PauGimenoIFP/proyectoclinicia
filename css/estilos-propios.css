@@ -3,7 +3,7 @@
     src: url('../font/Naste-Regular.ttf');   
   }
   #admin-login{
-    display: flex;
+    display: none;
   } 
   #admin-IncidenciaAbierta{
     display: none;

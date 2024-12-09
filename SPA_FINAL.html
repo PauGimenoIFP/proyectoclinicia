@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinica Sagrada Familia</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/estilos-propios.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/spa-usuario.css">
+
+</head>
+<body>
+<header>
+    <a id="logo">
+        <img src="csf-horitzontal-removebg-preview.png">
+    </a>
+</header>
+
+    <!-- user --> 
+    <section id="usuario-inicio">
+       
+        <div>
+        <button id="usuario-boton-crearincidencia">Crear Incidencia</button>
+        <button id="usuario-boton-buscarincidencia">Buscar Incidencia</button>
+        </div>
+
+        <div>
+            <button id="inicio-a-adminlogin">Eres admin?</button>
+        </div>
+
+    </section>
+
+    <section id="usuario-crearincidencia">
+
+    <div id="myCarousel" class="carousel slide mb-6">
+
+        <div class="carousel-indicators">
+        
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" class=""></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" class=""></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" class=""></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4" class=""></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="5" class=""></button>
+
+        </div>
+
+        <div class="carousel-inner">
+
+        <div class="carousel-item active">
+            <div class="contenido-1">
+            
+            <div>
+                <label for="crearincidencia-asunto" class="form-label">Asunto</label>
+                <input type="text" id="asunto" required>
+            </div>
+
+            <div>
+                <label for="detalle" class="form-label">Detalles</label>
+                <textarea id="detalle" required class="form-control"></textarea>
+            </div>
+
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <div class="contenido-2">
+            
+            <h3>Prioridad</h3>
+            <div>
+                
+                <select class="form-select" id="prioridad" required="">
+                <option value="">Selecciona Prioridad</option>
+                <option>Baja</option>
+                <option>Media</option>
+                <option>Alta</option>
+                <option>Urgente</option>
+                </select>
+                <label for="prioridad" class="form-label"></label>
+
+            </div>
+
+            <h3>Departamento Destino</h3>
+            <div>
+                
+                <select class="form-select" id="departamento" required="">
+                <option value="">Selecciona departamento</option>
+                <option>Departamento 1</option>
+                <option>Departamento 2</option>
+                <option>Departamento 3</option>
+                <option>Departamento 4</option>
+                </select>
+                <label for="departamento" class="form-label"></label>
+
+            </div>
+
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <div class="contenido-3">
+            
+            <div>
+                <label for="adjuntos" class="btn">
+                <h3>Deseas adjuntar archivos?</h3>
+                <input type="file" id="adjuntos" multiple style="display: none;">
+                </label>
+            </div>
+
+            <div class="adjuntos-preview">
+                Nada Seleccionado
+            </div>
+
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <div class="contenido-4">
+            
+            <h4>Quieres identificarte?</h4>
+            <h6>Opcional*</h6>
+            
+            <div>
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Ej: Maria Teresa" required="">
+                
+                <label for="email" class="form-label">Email <span class="text-body-secondary">(Optional)</span></label>
+                <input type="email" class="form-control" id="email" placeholder="you@example.com">
+            </div>
+
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <div class="contenido-5">
+            <div>
+                <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Next</span>
+                <button id="crear-incidencia" class="btn-creado">Crear</button> 
+                </button>
+                
+            </div>
+
+            <div>
+                <button class="btn-cancelado">Cancelar</button>
+            </div>
+            
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <div class="contenido-6">
+            
+            <h3>Guarda tu Código!</h3>
+            <div id="mostrar-codigo"></div>
+            
+            </div>
+        </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+        
+    </section>
+
+    <section id="usuario-buscarincidencia">
+
+    <div class="buscarincidencia-container">
+        <div class="buscarincidencia-container-1">
+        
+        <label for="buscador">
+            <input type="text" required id="buscador"/>
+        </label>
+
+        <button id="accionar-buscar"><h6>Buscar</h6></button>
+        
+
+        </div>
+
+        <div class="buscarincidencia-container-bot">
+
+        <div class="buscarincidencia-container-2">
+
+            <div>
+            <h6>Asunto:</h6>
+            <span id="buscarincidencia-asunto"></span>
+            </div>
+
+            <div>
+            <h6>Estado:</h6>
+            <span id="buscarincidencia-estado"></span>
+            </div>
+
+            <div>
+            <h6>Departamento:</h6>
+            <span id="buscarincidencia-departamento"></span>
+            </div>
+
+            <div>
+            <h6>Prioridad:</h6>
+            <span id="buscarincidencia-prioridad"></span>
+            </div>
+
+            <div>
+            <h6>Nombre:</h6>
+            <span id="buscarincidencia-nombre"></span>
+            </div>
+
+            <div>
+            <h6>Email:</h6>
+            <span id="buscarincidencia-email"></span>
+            </div>
+
+            <div>
+            <h6>Descripción:</h6>
+            <div id="buscarincidencia-detalle">
+
+            </div>
+            </div>
+        </div>
+
+        <div class="buscarincidencia-container-3">
+            
+            <h6>Adjuntos</h6>
+            <div id="buscarincidencia-adjuntos">
+            
+
+            </div>
+
+            <h6>Comentarios</h6>
+            <div id="buscarincidencia-comentarios">
+            
+            </div>
+
+        </div>
+        </div>
+    </div>
+
+    </section>
+
+    <!-- admin --> 
+    <section id="admin-login">
+        <div class="contenedor-login">
+            <form id="loginForm">
+                <img class="mb-4" src="https://cdn-icons-png.flaticon.com/512/1160/1160622.png" alt="" width="57" height="57">
+                <h1 class="h3 mb-3 fw-normal">Inicia sesión</h1>
+                <div class="form-floating">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Correo electronico</label>
+                </div>
+                <div class="form-floating" style="margin-top: 20px; margin-bottom: 20px">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword">Contraseña</label>
+                </div>
+                <button id="entrarCuenta" class="btn btn-primary w-100 py-2" type="submit">Entrar a cuenta</button>
+            </form>
+        </div>
+    </section>
+    <section id="admin-sidebar">
+        <div class="flex-shrink-0 p-3" id="sidebar">
+            <a class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
+              <span class="fs-5 fw-semibold" style="margin-left: 60px"><img src="https://cdn-icons-png.flaticon.com/512/17/17654.png" width="20px" height="20px" style="margin-right: 10px">Barra lateral</span>
+            </a>
+            <ul class="list-unstyled ps-0">
+              <li class="mb-1">
+                <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true" style="margin-left: 60px">
+                  Incidencias
+                </button>
+                <div class="collapse show" id="home-collapse">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a id="inicioAdmin" class="link-body-emphasis d-inline-flex text-decoration-none rounded" style="margin-left: 60px; cursor: pointer">Pendientes</a></li>
+                    <li><a id="hechasAdmin" class="link-body-emphasis d-inline-flex text-decoration-none rounded" style="margin-left: 60px; cursor: pointer">Hechas</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mb-1">
+                <button id="mensajesAdmin" class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" style="margin-left: 60px; cursor: pointer">
+                  Mensajes
+                </button>
+              </li>
+              <li class="border-top my-3"></li>
+              <li class="mb-1">
+                <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false" style="margin-left: 60px">
+                  Ajustes
+                </button>
+                <div class="collapse" id="account-collapse">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a id="perfilAdmin" class="link-body-emphasis d-inline-flex text-decoration-none rounded" style="margin-left: 60px; cursor: pointer">Perfil</a></li>
+                    <li><a id="loginAdmin" class="link-body-emphasis d-inline-flex text-decoration-none rounded" style="margin-left: 60px; cursor: pointer">Cerrar sesión</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+        </div>
+    </section>
+    <section id="admin-inicio" class="incidenciaabierta">
+        <div class="flex-shrink-0 p-3" id="contenedor-incidencia">
+            <div style="text-align: center;">
+                <h3>Nuevos tickets</h3>
+            </div>
+      
+            <div id="caja-incidencias-nuevas">
+            </div>
+      
+          </div>
+          <div class="flex-shrink-0 p-3" id="contenedor-proceso">
+            <div style="text-align: center;">
+                <h3>Tickets en proceso</h3>
+            </div>
+            <div id="caja-incidencias-abiertas">
+            </div>
+          </div>
+    </section>
+    <section id="admin-hechas" class="incidenciahecha">
+        <div class="flex-shrink-0 p-3" id="contenedor-incidencia-Hecha">
+            <div style="text-align: center;">
+              <h3>Tickets cerrados</h3>
+            </div>
+            <div id="caja-incidencias-hechas">
+
+            </div>
+        </div>
+    </section>
+    <section id="admin-mensajes">
+        <div id="chat-selection">
+            <div style="top: 10px; left: 5px; position: absolute">
+              <input type="text" class="form-control" id="floatingInput" placeholder="Escribe aquí..." size="26%">
+            </div>
+            <div class="flex-shrink-0 p-3" id="chat-min" style="top: 60px">
+              <h5>Falta de higiene en los baños</h5>
+            </div>
+            <div class="flex-shrink-0 p-3" id="chat-min" style="top: 180px">
+              <h5>Exigir cambio de comida</h5>
+            </div>
+          </div>
+          <div id="chat">
+            <div id="chat-messages" style="top: 10px; position: relative;">
+              <!-- Los mensajes aparecerán aquí -->
+            </div>
+            <div style="bottom: 10px; left: 10px; position: absolute">
+              <input type="text" class="form-control" id="floatingInput" placeholder="Escribe aquí..." size="121%" onkeypress="sendMessage(event)">
+            </div>
+        </div>
+    </section>
+    <section id="admin-perfil">
+        <div id="contenedor-Perfil">
+            <div id="margen-foto">
+              <img src="perfil-icono.png" width="100px" style="padding-bottom: 20px">
+              <a><br></a>
+              <a id="nombreUsuario" style="color:gray;">Celia</a>
+              <a><br></a>
+              <a id="correoUsuario" style="color:gray;">celiarg.clinica@hospital.com</a>
+            </div>
+            <div id="margen-texto-perfil1">
+              <label for="username" id="label-perfil" title="Nombre de usuario:">Nombre de usuario:</label>
+              <input type="text" class="form-control" id="username" placeholder="Nombre de usuario..." size="37%">
+              <label for="email" id="label-perfil" title="Correo electrónico:">Correo electrónico:</label>
+              <input type="email" class="form-control" id="email" placeholder="Correo electronico..." size="37%">
+            </div>
+            <div id="margen-texto-perfil2">
+              <label for="currentPassword" id="label-perfil" title="Contraseña actual (Obligatorio para pasar cualquier cambio):">Contraseña actual (Obligatorio para pasar cualquier cambio):</label>
+              <input type="password" class="form-control" id="currentPassword" placeholder="Contraseña actual..." size="37%">
+              <label for="newPassword" id="label-perfil" title="Contraseña nueva (opcional si no se quiere cambiar):">Contraseña nueva (opcional si no se quiere cambiar):</label>
+              <input type="password" class="form-control" id="newPassword" placeholder="Contraseña nueva..." size="37%">
+            </div>
+            <div id="boton-perfil">
+              <button class="btn btn-primary" type="button" onclick="cambiarDatos()">Cambiar los datos</button>
+            </div>
+          </div>
+    </section>
+    <section id="admin-IncidenciaAbierta">
+      <div id="chat" style="left: 20%; width: 40%;">
+        <a>Asunto:<br></a>
+        <a id="asunto-incidencia"></a>
+        <a style="margin-left: 15px"><br><br>Descripción:<br></a>
+        <a id="descripcion"></a>
+        <a><br><br>Creador: </a>
+        <a id="nombre-incidencia"></a>
+        <a><br><br>Departamento: </a>
+        <a id="departamento-incidencia"></a>
+        <a><br><br>Prioridad: </a>
+        <a id="prioridad-incidencia"></a>
+        <a><br><br>Estado de incidencia: </a>
+        <a id="estado-incidencia"></a>
+      </div>
+      <div id="archivos">
+        <a>Archivos añadidos:</a>
+        <div style="margin-top: 15px; position: absolute;">
+          <a href="Ejemplo-de-descarga-pdf.pdf" download="Ejemplo-de-descarga-pdf.pdf">
+            <img src="https://static.vecteezy.com/system/resources/previews/023/234/824/non_2x/pdf-icon-red-and-white-color-for-free-png.png" alt="" width="200px" height="200px">
+          </a>
+          <a href="Ejemplo-de-descarga-pdf.pdf" download="Ejemplo-de-descarga-pdf.pdf">
+            <img src="https://static.vecteezy.com/system/resources/previews/023/234/824/non_2x/pdf-icon-red-and-white-color-for-free-png.png" alt="" width="200px" height="200px">
+          </a>
+        </div>
+      </div>
+      <div id="boton-incidencia1">
+        <button class="btn btn-primary w-100 py-2" type="submit">Borrar</button>
+      </div> 
+      <div id="boton-incidencia2">
+        <button class="btn btn-primary w-100 py-2" type="submit">Completar</button>
+      </div>
+    </section>
+
+<footer>
+</footer>
+    <script>
+        function cambiarDatos() {
+        const nombre = document.getElementById('username').value;
+        const correo = document.getElementById('email').value;
+        const contrasenaActual = document.getElementById('currentPassword').value;
+
+        // Validar que los campos no estén vacíos y que se haya ingresado la contraseña
+        if (contrasenaActual === '' || (nombre === '' && correo === '')) {
+            alert('Por favor, complete todos los campos requeridos y asegúrese de ingresar la contraseña actual.');
+            return;
+        }
+
+        // Validar que el correo contenga una '@'
+        if (correo !== '' && !correo.includes('@')) {
+            alert('Por favor, ingrese un correo electrónico válido que contenga "@"');
+            return;
+        }
+
+        // Actualizar el texto de nombre y correo
+        if (nombre !== '') {
+            document.getElementById('nombreUsuario').innerText = nombre;
+        }
+        if (correo !== '') {
+            document.getElementById('correoUsuario').innerText = correo;
+        }
+
+        alert('Datos actualizados correctamente.');
+        }
+    </script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/usuario-custom.js"></script>
+    <script src="js/SPA-admin.js"></script>
+    <script src="js/spa-funciones.js"></script>
+    <script src="js/spa-redirecciones.js"></script>
+
+</body>
+</html>

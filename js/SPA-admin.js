@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Redireccionamiento de Botones
   // Botones que redirigiran:
+  let inicio_a_adminlogin = document.getElementById('inicio-a-adminlogin');
+
   let ir_inicioincidencias = document.getElementById("inicioAdmin");
   let ir_Hechasincidencias = document.getElementById("hechasAdmin");
   let ir_Mensajes = document.getElementById("mensajesAdmin");
@@ -40,22 +42,13 @@ document.addEventListener("DOMContentLoaded", () => {
     section_sidebar.style.display = "none";
   }
 
-  // Manejar el envío del formulario
-  loginForm.addEventListener("submit", function (e) {
-    e.preventDefault(); // Prevenir el envío del formulario
-    const correo = document.getElementById("floatingInput").value;
-    const contrasena = document.getElementById("floatingPassword").value;
-
-    // Verifica que ambos campos no estén vacíos
-    if (correo && contrasena) {
-      // Mostrar la sección de inicio y ocultar el login
-      displaynone();
-      section_inicioIncidencia.style.display = "flex";
-      section_sidebar.style.display = "flex";
-    } else {
-      alert("Por favor, completa ambos campos.");
-    }
+ 
+  
+  inicio_a_adminlogin.addEventListener('click', function () {
+    displaynone();
+    section_login.style.display = "flex";
   });
+
   ir_inicioincidencias.addEventListener("click", function () {
     displaynone();
     section_inicioIncidencia.style.display = "flex";

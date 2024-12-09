@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let logo = document.getElementById('logo');
         let ir_crearincidencia = document.getElementById('usuario-boton-crearincidencia');
         let ir_buscarincidencia = document.getElementById('usuario-boton-buscarincidencia');
+        let inicio_a_adminlogin = document.getElementById('inicio-a-adminlogin');
 
 
         // Sections a redirigir:
@@ -27,6 +28,11 @@ document.addEventListener('DOMContentLoaded', () => {
             section_inicio.style.display = 'flex';
         })  
 
+        inicio_a_adminlogin.addEventListener('click', function () {
+            displaynone();
+            section_inicio.style.display = "flex";
+          });
+
         ir_crearincidencia.addEventListener('click', function() {
             console.log('Boton ir crear incidencia');
             displaynone();
@@ -38,6 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
             displaynone();
             section_buscarincidencia.style.display = "flex";
         });
+
+
         
     //
 

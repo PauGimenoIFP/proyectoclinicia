@@ -319,7 +319,7 @@ section{
 .buscarincidencia-container {
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 65%;
     height: 90%;
     margin: 1em;
 }
@@ -328,6 +328,7 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
+    
     border-radius: 10px;
     background-color: #F2F3F4;
 }
@@ -346,6 +347,7 @@ section{
     justify-content: space-between;
     flex-grow: 1;
     margin-top: 1em;
+    margin-bottom: 2em;
 }
 .buscarincidencia-container-2{
     width: 65%;

@@ -203,6 +203,7 @@ document.addEventListener("DOMContentLoaded", () => {
         logo.addEventListener('click', function(){
             console.log('Logo Inicio');
             displaynone();
+            section_sidebar.style.display = 'none';
             section_inicio.style.display = 'flex';
         }); 
 
@@ -295,7 +296,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Mostrar
             let mostrarCodigoDiv = document.getElementById("mostrar-codigo");
-            mostrarCodigoDiv.textContent = nuevaIncidencia.code;
+            let h4 = document.createElement('h4');
+            h4.textContent = nuevaIncidencia.code;
+            mostrarCodigoDiv.appendChild(h4);
 
             // Limpiar los campos del formulario
             document.getElementById("asunto").value = "";
@@ -308,9 +311,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
             
         // Captura del Boton de crear incidencia y su funcionalidad
+        let myCarousel = new bootstrap.Carousel(document.getElementById('myCarousel'));
         let crear = document.getElementById("crear-incidencia");
         crear.addEventListener("click", () => {
             console.log("boton crear pulsado");
+            console.log(incidencias);
+            myCarousel.next();
             crearincidencia();
         });
         

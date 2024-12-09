@@ -18,6 +18,13 @@ header a{
 }
 header img{
     height: 80%;
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    padding: 6px;
+    margin: 6px;
+}
+header img:hover{
+    transform: scale(1.05);
 }
 section{
     flex-grow: 1;

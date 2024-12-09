@@ -88,6 +88,65 @@ incidencias.push({
 
 document.addEventListener("DOMContentLoaded", () => {
 // ----------------------------------------------------------------- //
+
+    // funciones para incidencias admin
+    if (document.querySelector(".incidenciaabierta")) {
+        function imprimirnuevo() {
+          //imprimir incidencais nuevas
+          let boxnuevas = document.getElementById("caja-incidencias-nuevas");
+    
+          incidencias.forEach((incidencia) => {
+            if (incidencia.estado === "Nuevo") {
+              let nuevaIncidencia = document.createElement("div");
+              nuevaIncidencia.textContent = incidencia.asunto;
+              nuevaIncidencia.className = "incidencia";
+              nuevaIncidencia.id = "incidenciaestado";
+              nuevaIncidencia.setAttribute("data-id", incidencia.code);
+              boxnuevas.appendChild(nuevaIncidencia);
+            }
+          });
+        }
+    
+        imprimirnuevo();
+        console.log("estoy en incidencia abierta");
+    
+        function imprimirabierto() {
+          //imprimir incidencais nuevas
+          let boxnuevas = document.getElementById("caja-incidencias-abiertas");
+    
+          incidencias.forEach((incidencia) => {
+            if (incidencia.estado === "Abierto") {
+              let nuevaIncidencia = document.createElement("div");
+              nuevaIncidencia.textContent = incidencia.asunto;
+              nuevaIncidencia.className = "incidencia";
+              nuevaIncidencia.id = "incidenciaestado";
+              nuevaIncidencia.setAttribute("data-id", incidencia.code);
+              boxnuevas.appendChild(nuevaIncidencia);
+            }
+          });
+        }
+    
+        imprimirabierto();
+      }
+      if (document.querySelector(".incidenciahecha")) {
+        function imprimirhecho() {
+          //imprimir incidencais nuevas
+          let boxnuevas = document.getElementById("caja-incidencias-hechas");
+    
+          incidencias.forEach((incidencia) => {
+            if (incidencia.estado === "Cerrado") {
+              let nuevaIncidencia = document.createElement("div");
+              nuevaIncidencia.textContent = incidencia.asunto;
+              nuevaIncidencia.className = "incidencia";
+              nuevaIncidencia.id = "incidenciaestado";
+              nuevaIncidencia.setAttribute("data-id", incidencia.code);
+              boxnuevas.appendChild(nuevaIncidencia);
+            }
+          });
+        }
+    
+        imprimirhecho();
+    }
     // Redireccionamiento
     console.log('dentro redireccion');
 
@@ -123,13 +182,6 @@ document.addEventListener("DOMContentLoaded", () => {
         let section_mensajes = document.getElementById("admin-mensajes");
         let section_incidenciaabierta = document.getElementById("admin-IncidenciaAbierta");
 
-            //De usuario
-            //Pequeña funcion para cerrar todas las secciones y luego mostrar la correcta
-            function displaynoneuser(){
-                section_inicio.style.display = 'none';
-                section_crearincidencia.style.display = 'none';
-                section_buscarincidencia.style.display = 'none';
-            }
             // De Admin
             //Pequeña funcion para cerrar todas las secciones y luego mostrar la correcta
             function displaynone() {
@@ -139,6 +191,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 section_perfil.style.display = "none";
                 section_mensajes.style.display = "none";
                 section_incidenciaabierta.style.display = "none";
+                section_inicio.style.display = 'none';
+                section_crearincidencia.style.display = 'none';
+                section_buscarincidencia.style.display = 'none';
             }
 
         // "Redireccionamiento" 
@@ -147,19 +202,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
         logo.addEventListener('click', function(){
             console.log('Logo Inicio');
-            displaynoneuser();
+            displaynone();
             section_inicio.style.display = 'flex';
         }); 
 
         ir_crearincidencia.addEventListener('click', function() {
             console.log('Boton ir crear incidencia');
-            displaynoneuser();
+            displaynone();
             section_crearincidencia.style.display = 'flex';
         });
 
         ir_buscarincidencia.addEventListener('click', function() {
             console.log('Boton ir buscar incidencia');
-            displaynoneuser();
+            displaynone();
             section_buscarincidencia.style.display = "flex";
         });
 
@@ -319,7 +374,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Funciones Admin
         console.log('dentro admin');
-
         // Manejar el envío del formulario
         loginForm.addEventListener("submit", function (e) {
             e.preventDefault(); // Prevenir el envío del formulario

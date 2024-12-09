@@ -212,8 +212,8 @@ document.addEventListener("DOMContentLoaded", () => {
   logo.addEventListener("click", function () {
     console.log("Logo Inicio");
     displaynone();
-    section_inicio.style.display = "flex";
     section_sidebar.style.display = "none";
+    section_inicio.style.display = "flex";
   });
 
   ir_crearincidencia.addEventListener("click", function () {
@@ -302,7 +302,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Mostrar
     let mostrarCodigoDiv = document.getElementById("mostrar-codigo");
-    mostrarCodigoDiv.textContent = nuevaIncidencia.code;
+    let h4 = document.createElement("h4");
+    h4.textContent = nuevaIncidencia.code;
+    mostrarCodigoDiv.appendChild(h4);
 
     // Limpiar los campos del formulario
     document.getElementById("asunto").value = "";
@@ -315,9 +317,14 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Captura del Boton de crear incidencia y su funcionalidad
+  let myCarousel = new bootstrap.Carousel(
+    document.getElementById("myCarousel")
+  );
   let crear = document.getElementById("crear-incidencia");
   crear.addEventListener("click", () => {
     console.log("boton crear pulsado");
+    console.log(incidencias);
+    myCarousel.next();
     crearincidencia();
   });
 
@@ -392,8 +399,8 @@ document.addEventListener("DOMContentLoaded", () => {
       section_sidebar.style.display = "flex";
 
       // Limpiar los campos del formulario
-      document.getElementById("floatingInput").value = '';
-      document.getElementById("floatingPassword").value = '';
+      document.getElementById("floatingInput").value = "";
+      document.getElementById("floatingPassword").value = "";
     } else {
       alert("Por favor, completa ambos campos.");
     }
@@ -476,35 +483,37 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function cambiarDatos() {
-    const nombre = document.getElementById('username').value;
-    const correo = document.getElementById('email_perfil').value;
-    const contrasenaActual = document.getElementById('currentPassword').value;
+  const nombre = document.getElementById("username").value;
+  const correo = document.getElementById("email_perfil").value;
+  const contrasenaActual = document.getElementById("currentPassword").value;
 
-    // Validar que los campos no estén vacíos y que se haya ingresado la contraseña
-    if (contrasenaActual === '' || (nombre === '' && correo === '')) {
-        alert('Por favor, complete todos los campos requeridos y asegúrese de ingresar la contraseña actual.');
-        return;
-    }
+  // Validar que los campos no estén vacíos y que se haya ingresado la contraseña
+  if (contrasenaActual === "" || (nombre === "" && correo === "")) {
+    alert(
+      "Por favor, complete todos los campos requeridos y asegúrese de ingresar la contraseña actual."
+    );
+    return;
+  }
 
-    // Validar que el correo contenga una '@'
-    if (correo !== '' && !correo.includes('@')) {
-        alert('Por favor, ingrese un correo electrónico válido que contenga "@"');
-        return;
-    }
+  // Validar que el correo contenga una '@'
+  if (correo !== "" && !correo.includes("@")) {
+    alert('Por favor, ingrese un correo electrónico válido que contenga "@"');
+    return;
+  }
 
-    // Actualizar el texto de nombre y correo
-    if (nombre !== '') {
-        document.getElementById('nombreUsuario').innerText = nombre;
-    }
-    if (correo !== '') {
-        document.getElementById('correoUsuario').innerText = correo;
-    }
+  // Actualizar el texto de nombre y correo
+  if (nombre !== "") {
+    document.getElementById("nombreUsuario").innerText = nombre;
+  }
+  if (correo !== "") {
+    document.getElementById("correoUsuario").innerText = correo;
+  }
 
-    alert('Datos actualizados correctamente.');
+  alert("Datos actualizados correctamente.");
 
-    // Limpiar los campos del formulario
-    document.getElementById('username').value = '';
-    document.getElementById('email_perfil').value = '';
-    document.getElementById('currentPassword').value = '';
-    document.getElementById('newPassword').value = '';
+  // Limpiar los campos del formulario
+  document.getElementById("username").value = "";
+  document.getElementById("email_perfil").value = "";
+  document.getElementById("currentPassword").value = "";
+  document.getElementById("newPassword").value = "";
 }

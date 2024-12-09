@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  if (document.querySelector("#admin-IncidenciaAbierta")) {
+  function actualizarDatosIncidencia() {
     const asuntoElemento = document.getElementById("asunto-incidencia");
     const detalleElemento = document.getElementById("descripcion");
     const prioridadElemento = document.getElementById("prioridad-incidencia");
@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const nombreGuardado = localStorage.getItem("nombreSeleccionado");
 
     if (asuntoGuardado) {
-      asuntoElemento.textContent = asuntoGuardado; // Establecer el asunto
+      asuntoElemento.textContent = asuntoGuardado; // Establecer solo el asunto
     }
     if (detalleGuardado) {
       detalleElemento.textContent = detalleGuardado; // Establecer el detalle
@@ -145,33 +145,12 @@ document.addEventListener("DOMContentLoaded", () => {
       nombreElemento.textContent = nombreGuardado; // Establecer el nombre
     }
   }
-  function cambiarDatos() {
-    const nombre = document.getElementById("username").value;
-    const correo = document.getElementById("email").value;
-    const contrasenaActual = document.getElementById("currentPassword").value;
 
-    // Validar que los campos no estén vacíos y que se haya ingresado la contraseña
-    if (contrasenaActual === "" || (nombre === "" && correo === "")) {
-      alert(
-        "Por favor, complete todos los campos requeridos y asegúrese de ingresar la contraseña actual."
-      );
-      return;
-    }
+  let intervaloActualizar;
 
-    // Validar que el correo contenga una '@'
-    if (correo !== "" && !correo.includes("@")) {
-      alert('Por favor, ingrese un correo electrónico válido que contenga "@"');
-      return;
-    }
-
-    // Actualizar el texto de nombre y correo
-    if (nombre !== "") {
-      document.getElementById("nombreUsuario").innerText = nombre;
-    }
-    if (correo !== "") {
-      document.getElementById("correoUsuario").innerText = correo;
-    }
-
-    alert("Datos actualizados correctamente.");
+  if (document.querySelector("#admin-IncidenciaAbierta")) {
+    actualizarDatosIncidencia(); // Llamar a la función para actualizar los datos
+    clearInterval(intervaloActualizar); // Limpiar el intervalo anterior
+    intervaloActualizar = setInterval(actualizarDatosIncidencia, 1); // Actualizar cada 2 segundos
   }
 });

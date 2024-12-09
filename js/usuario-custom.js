@@ -247,7 +247,7 @@ document.addEventListener("DOMContentLoaded", () => {
     imprimirabierto();
   }
   if (document.querySelector(".incidenciahecha")) {
-    function imprimirnuevo() {
+    function imprimirhecho() {
       //imprimir incidencais nuevas
       let boxnuevas = document.getElementById("caja-incidencias-hechas");
 
@@ -263,6 +263,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
-    imprimirnuevo();
+    imprimirhecho();
   }
 });

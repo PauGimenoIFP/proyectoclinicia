@@ -153,4 +153,68 @@ document.addEventListener("DOMContentLoaded", () => {
     clearInterval(intervaloActualizar); // Limpiar el intervalo anterior
     intervaloActualizar = setInterval(actualizarDatosIncidencia, 1); // Actualizar cada 2 segundos
   }
+
+  // Función para actualizar el estado de la incidencia
+  function actualizarEstadoIncidencia() {
+    const incidenciaId = localStorage.getItem("incidenciaSeleccionada");
+    const incidencia = incidencias.find(inc => inc.code == incidenciaId);
+
+    if (incidencia) {
+      // Ocultar el botón "Proceso" si el estado es "Abierto"
+      if (incidencia.estado === "Abierto" || incidencia.estado === "Cerrado") {
+        document.getElementById("boton-proceso").style.display = "none"; // Ocultar el botón
+      } else {
+        document.getElementById("boton-proceso").style.display = "block"; // Mostrar el botón
+      }
+
+      // Ocultar el botón "Completar" si el estado es "Cerrado"
+      if (incidencia.estado === "Cerrado") {
+        document.getElementById("boton-completar").style.display = "none"; // Ocultar el botón
+      } else {
+        document.getElementById("boton-completar").style.display = "block"; // Mostrar el botón
+      }
+    }
+  }
+
+  // Llamar a la función para actualizar el estado al cargar la sección
+  actualizarEstadoIncidencia();
+
+  // Actualizar el estado de la incidencia cada 2 segundos
+  setInterval(actualizarEstadoIncidencia, 1);
+
+  // Agregar evento al botón "Completar"
+  document.getElementById("boton-completar").addEventListener("click", function() {
+    const incidenciaId = localStorage.getItem("incidenciaSeleccionada");
+    const incidencia = incidencias.find(inc => inc.code == incidenciaId);
+
+    if (incidencia) {
+      incidencia.estado = "Cerrado"; // Cambiar el estado a "Cerrado"
+      alert(`La incidencia ${incidenciaId} ha sido cerrada.`);
+      
+      // Deshabilitar y ocultar el botón "Completar"
+      const botonCompletar = document.getElementById("boton-completar");
+      botonCompletar.disabled = true; // Deshabilitar el botón
+      botonCompletar.style.display = "none"; // Ocultar el botón
+    } else {
+      alert("Incidencia no encontrada.");
+    }
+  });
+
+  // Agregar evento al botón "Proceso"
+  document.getElementById("boton-proceso").addEventListener("click", function() {
+    const incidenciaId = localStorage.getItem("incidenciaSeleccionada");
+    const incidencia = incidencias.find(inc => inc.code == incidenciaId);
+
+    if (incidencia) {
+      incidencia.estado = "Abierto"; // Cambiar el estado a "Abierto"
+      alert(`La incidencia ${incidenciaId} ha sido marcada como Abierta.`);
+      
+      // Deshabilitar y ocultar el botón "Proceso"
+      const botonProceso = document.getElementById("boton-proceso");
+      botonProceso.disabled = true; // Deshabilitar el botón
+      botonProceso.style.display = "none"; // Ocultar el botón
+    } else {
+      alert("Incidencia no encontrada.");
+    }
+  });
 });

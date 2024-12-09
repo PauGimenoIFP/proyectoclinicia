@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let logo = document.getElementById('logo');
         let ir_crearincidencia = document.getElementById('usuario-boton-crearincidencia');
         let ir_buscarincidencia = document.getElementById('usuario-boton-buscarincidencia');
-        let inicio_a_adminlogin = document.getElementById('inicio-a-adminlogin');
+        let ir_adminlogin = document.getElementById('ir-adminlogin');
 
         // Botones que redirigiran: De Admin
         let ir_inicioincidencias = document.getElementById("inicioAdmin");
@@ -107,7 +107,8 @@ document.addEventListener("DOMContentLoaded", () => {
         let ir_entrarcuenta = document.getElementById("entrarCuenta");
         let loginForm = document.getElementById("loginForm");
         let ir_incidencias = document.querySelectorAll("#incidenciaestado");
-
+        
+        console.log('dentro sections');
         // Sections a redirigir: De Usuario
         let section_inicio = document.getElementById('usuario-inicio');
         let section_crearincidencia = document.getElementById('usuario-crearincidencia');
@@ -142,16 +143,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // "Redireccionamiento" 
         // De usuario 
+        console.log('Dentro eventos de redireccion');
+
         logo.addEventListener('click', function(){
             console.log('Logo Inicio');
             displaynoneuser();
             section_inicio.style.display = 'flex';
-        })  
-
-        inicio_a_adminlogin.addEventListener('click', function () {
-            displaynoneuser();
-            section_inicio.style.display = "flex";
-          });
+        }); 
 
         ir_crearincidencia.addEventListener('click', function() {
             console.log('Boton ir crear incidencia');
@@ -173,8 +171,10 @@ document.addEventListener("DOMContentLoaded", () => {
             section_sidebar.style.display = "none";
         }
         
-        inicio_a_adminlogin.addEventListener('click', function () {
+        ir_adminlogin.addEventListener('click', function () {
+            console.log('Ir a login');
             displaynone();
+            section_inicio.style.display = "none";
             section_login.style.display = "flex";
         });
 
@@ -336,7 +336,7 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("Por favor, completa ambos campos.");
             }
         });
-
+        
         ir_incidencias.forEach(function (ir_incidencia) {
             ir_incidencia.addEventListener("click", function () {
               const incidenciaId = ir_incidencia.getAttribute("data-id");

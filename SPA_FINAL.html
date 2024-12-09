@@ -366,8 +366,8 @@
             <div id="margen-texto-perfil1">
               <label for="username" id="label-perfil" title="Nombre de usuario:">Nombre de usuario:</label>
               <input type="text" class="form-control" id="username" placeholder="Nombre de usuario..." size="37%">
-              <label for="email" id="label-perfil" title="Correo electrónico:">Correo electrónico:</label>
-              <input type="email" class="form-control" id="email" placeholder="Correo electronico..." size="37%">
+              <label for="email_perfil" id="label-perfil" title="Correo electrónico:">Correo electrónico:</label>
+              <input type="email" class="form-control" id="email_perfil" placeholder="Correo electronico..." size="37%">
             </div>
             <div id="margen-texto-perfil2">
               <label for="currentPassword" id="label-perfil" title="Contraseña actual (Obligatorio para pasar cualquier cambio):">Contraseña actual (Obligatorio para pasar cualquier cambio):</label>
@@ -416,35 +416,6 @@
 
 <footer>
 </footer>
-  <script>
-    function cambiarDatos() {
-    const nombre = document.getElementById('username').value;
-    const correo = document.getElementById('email').value;
-    const contrasenaActual = document.getElementById('currentPassword').value;
-
-    // Validar que los campos no estén vacíos y que se haya ingresado la contraseña
-    if (contrasenaActual === '' || (nombre === '' && correo === '')) {
-        alert('Por favor, complete todos los campos requeridos y asegúrese de ingresar la contraseña actual.');
-        return;
-    }
-
-    // Validar que el correo contenga una '@'
-    if (correo !== '' && !correo.includes('@')) {
-        alert('Por favor, ingrese un correo electrónico válido que contenga "@"');
-        return;
-    }
-
-    // Actualizar el texto de nombre y correo
-    if (nombre !== '') {
-        document.getElementById('nombreUsuario').innerText = nombre;
-    }
-    if (correo !== '') {
-        document.getElementById('correoUsuario').innerText = correo;
-    }
-
-    alert('Datos actualizados correctamente.');
-    }
-  </script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/SPA.js"></script>
 

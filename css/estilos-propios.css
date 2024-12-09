@@ -5,6 +5,9 @@
   #admin-login{
     display: flex;
   } 
+  #admin-IncidenciaAbierta{
+    display: none;
+  }
   #admin-perfil{
     display: none;
   }

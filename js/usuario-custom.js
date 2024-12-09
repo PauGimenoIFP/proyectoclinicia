@@ -216,12 +216,10 @@ document.addEventListener("DOMContentLoaded", () => {
       incidencias.forEach((incidencia) => {
         if (incidencia.estado === "Nuevo") {
           let nuevaIncidencia = document.createElement("div");
-          nuevaIncidencia.textContent = `Incidencia: ${incidencia.asunto}`;
+          nuevaIncidencia.textContent = incidencia.asunto;
           nuevaIncidencia.className = "incidencia";
-
-          nuevaIncidencia.addEventListener("click", () => {
-            window.location.href = "IncidenciaAbierta.html";
-          });
+          nuevaIncidencia.id = "incidenciaestado";
+          nuevaIncidencia.setAttribute("data-id", incidencia.code);
           boxnuevas.appendChild(nuevaIncidencia);
         }
       });
@@ -237,17 +235,34 @@ document.addEventListener("DOMContentLoaded", () => {
       incidencias.forEach((incidencia) => {
         if (incidencia.estado === "Abierto") {
           let nuevaIncidencia = document.createElement("div");
-          nuevaIncidencia.textContent = `Incidencia: ${incidencia.asunto}`;
+          nuevaIncidencia.textContent = incidencia.asunto;
           nuevaIncidencia.className = "incidencia";
-
-          nuevaIncidencia.addEventListener("click", () => {
-            window.location.href = "IncidenciaProceso.html";
-          });
+          nuevaIncidencia.id = "incidenciaestado";
+          nuevaIncidencia.setAttribute("data-id", incidencia.code);
           boxnuevas.appendChild(nuevaIncidencia);
         }
       });
     }
 
     imprimirabierto();
+  }
+  if (document.querySelector(".incidenciahecha")) {
+    function imprimirnuevo() {
+      //imprimir incidencais nuevas
+      let boxnuevas = document.getElementById("caja-incidencias-hechas");
+
+      incidencias.forEach((incidencia) => {
+        if (incidencia.estado === "Cerrado") {
+          let nuevaIncidencia = document.createElement("div");
+          nuevaIncidencia.textContent = incidencia.asunto;
+          nuevaIncidencia.className = "incidencia";
+          nuevaIncidencia.id = "incidenciaestado";
+          nuevaIncidencia.setAttribute("data-id", incidencia.code);
+          boxnuevas.appendChild(nuevaIncidencia);
+        }
+      });
+    }
+
+    imprimirnuevo();
   }
 });

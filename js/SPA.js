@@ -106,7 +106,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
-    imprimirnuevo();
     console.log("estoy en incidencia abierta");
 
     function imprimirabierto() {
@@ -124,8 +123,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     }
-
-    imprimirabierto();
   }
   if (document.querySelector(".incidenciahecha")) {
     function imprimirhecho() {
@@ -144,7 +141,84 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
-    imprimirhecho();
+    setInterval(() => {
+      imprimirnuevo(); // Imprime incidencias nuevas
+      imprimirabierto(); // Imprime incidencias abiertas
+      imprimirhecho(); // Imprime incidencias cerradas
+      let ir_incidencias = document.querySelectorAll("#incidenciaestado");
+      let section_incidenciaabierta = document.getElementById(
+        "admin-IncidenciaAbierta"
+      );
+      ir_incidencias.forEach(function (ir_incidencia) {
+        ir_incidencia.addEventListener("click", function () {
+          const incidenciaId = ir_incidencia.getAttribute("data-id");
+          const asunto = ir_incidencia.textContent;
+
+          // Obtener los detalles de la incidencia desde el array de incidencias
+          const incidencia = incidencias.find(
+            (inc) => inc.code == incidenciaId
+          );
+
+          if (incidencia) {
+            localStorage.setItem("incidenciaSeleccionada", incidenciaId);
+            localStorage.setItem("asuntoSeleccionado", asunto);
+            localStorage.setItem("detalleSeleccionado", incidencia.detalle);
+            localStorage.setItem("prioridadSeleccionada", incidencia.prioridad);
+            localStorage.setItem(
+              "departamentoSeleccionado",
+              incidencia.departamento
+            );
+            localStorage.setItem("estadoSeleccionado", incidencia.estado);
+            localStorage.setItem("nombreSeleccionado", incidencia.nombre);
+          }
+
+          displaynone();
+          section_incidenciaabierta.style.display = "flex";
+
+          // Guardar la última incidencia visitada
+          window.ultimaIncidencia = incidencia; // Almacena la última incidencia visitada
+        });
+      });
+      // Agregar el evento para el botón "En proceso"
+      let botonProceso = document.getElementById("boton-proceso");
+
+      // Verificar el estado de la incidencia y mostrar/ocultar el botón
+      let incidenciaId = localStorage.getItem("incidenciaSeleccionada");
+      let incidencia = incidencias.find((inc) => inc.code == incidenciaId);
+
+      if (incidencia) {
+        if (incidencia.estado === "Nuevo") {
+          botonProceso.style.display = "block"; // Mostrar el botón si el estado es "Nuevo"
+        } else {
+          botonProceso.style.display = "none"; // Ocultar el botón si el estado no es "Nuevo"
+        }
+      }
+
+      // Agregar el evento para el botón "En proceso"
+      botonProceso.onclick = () => { // Cambiar a onclick para evitar múltiples registros
+        // Cambiar el estado a "Abierto" si la última incidencia existe
+        if (window.ultimaIncidencia) {
+          window.ultimaIncidencia.estado = "Abierto";
+          console.log(
+            `Estado de la incidencia ${window.ultimaIncidencia.code} cambiado a "Abierto"`
+          );
+        }
+      };
+
+      // Agregar el evento para el botón "Completar"
+      let botonCompletar = document.getElementById("boton-completar");
+
+      // Agregar el evento para el botón "Completar"
+      botonCompletar.onclick = () => { // Cambiar a onclick para evitar múltiples registros
+        // Cambiar el estado a "Cerrado" si la última incidencia existe
+        if (window.ultimaIncidencia) {
+          window.ultimaIncidencia.estado = "Cerrado";
+          console.log(
+            `Estado de la incidencia ${window.ultimaIncidencia.code} cambiado a "Cerrado"`
+          );
+        }
+      };
+    }, 1000);
   }
   // Redireccionamiento
   console.log("dentro redireccion");
@@ -168,7 +242,6 @@ document.addEventListener("DOMContentLoaded", () => {
   let ir_login = document.getElementById("loginAdmin");
   let ir_entrarcuenta = document.getElementById("entrarCuenta");
   let loginForm = document.getElementById("loginForm");
-  let ir_incidencias = document.querySelectorAll("#incidenciaestado");
 
   console.log("dentro sections");
   // Sections a redirigir: De Usuario
@@ -328,46 +401,6 @@ document.addEventListener("DOMContentLoaded", () => {
     crearincidencia();
   });
 
-  // Agregar el evento para el botón "En proceso"
-  let botonProceso = document.getElementById("boton-proceso");
-
-  // Verificar el estado de la incidencia y mostrar/ocultar el botón
-  let incidenciaId = localStorage.getItem("incidenciaSeleccionada");
-  let incidencia = incidencias.find((inc) => inc.code == incidenciaId);
-
-  if (incidencia) {
-    if (incidencia.estado === "Nuevo") {
-      botonProceso.style.display = "block"; // Mostrar el botón si el estado es "Nuevo"
-    } else {
-      botonProceso.style.display = "none"; // Ocultar el botón si el estado no es "Nuevo"
-    }
-  }
-
-  // Agregar el evento para el botón "En proceso"
-  botonProceso.addEventListener("click", () => {
-    // Cambiar el estado a "Abierto" si la incidencia existe
-    if (incidencia) {
-      incidencia.estado = "Abierto";
-      console.log(
-        `Estado de la incidencia ${incidenciaId} cambiado a "Abierto"`
-      );
-    }
-  });
-
-  // Agregar el evento para el botón "Completar"
-  let botonCompletar = document.getElementById("boton-completar");
-
-  // Agregar el evento para el botón "Completar"
-  botonCompletar.addEventListener("click", () => {
-    // Cambiar el estado a "Cerrado" si la incidencia existe
-    if (incidencia) {
-      incidencia.estado = "Cerrado";
-      console.log(
-        `Estado de la incidencia ${incidenciaId} cambiado a "Cerrado"`
-      );
-    }
-  });
-
   // ----------------------------------------------------------------- //
   function buscarincidencia() {
     // capturo el codigo introducido
@@ -444,32 +477,6 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       alert("Por favor, completa ambos campos.");
     }
-  });
-
-  ir_incidencias.forEach(function (ir_incidencia) {
-    ir_incidencia.addEventListener("click", function () {
-      const incidenciaId = ir_incidencia.getAttribute("data-id");
-      const asunto = ir_incidencia.textContent;
-
-      // Obtener los detalles de la incidencia desde el array de incidencias
-      const incidencia = incidencias.find((inc) => inc.code == incidenciaId);
-
-      if (incidencia) {
-        localStorage.setItem("incidenciaSeleccionada", incidenciaId);
-        localStorage.setItem("asuntoSeleccionado", asunto);
-        localStorage.setItem("detalleSeleccionado", incidencia.detalle);
-        localStorage.setItem("prioridadSeleccionada", incidencia.prioridad);
-        localStorage.setItem(
-          "departamentoSeleccionado",
-          incidencia.departamento
-        );
-        localStorage.setItem("estadoSeleccionado", incidencia.estado);
-        localStorage.setItem("nombreSeleccionado", incidencia.nombre);
-      }
-
-      displaynone();
-      section_incidenciaabierta.style.display = "flex";
-    });
   });
 
   function actualizarDatosIncidencia() {

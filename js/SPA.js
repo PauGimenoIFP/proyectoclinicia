@@ -428,23 +428,24 @@ document.addEventListener("DOMContentLoaded", () => {
       // Si se encuentra la incidencia, mostrarla en el HTML
       console.log("Incidencia encontrada:", resultado);
 
-      asunto.textContent = resultado.asunto;
-      estado.textContent = resultado.estado;
-      departamento.textContent = resultado.departamento;
-      prioridad.textContent = resultado.prioridad;
-      nombre.textContent = resultado.nombre;
-      email.textContent = resultado.email;
-      detalle.textContent = resultado.detalle;
+      asunto.innerHTML = `<div>${resultado.asunto}</div>`;
+      estado.innerHTML = `<div>${resultado.estado}</div>`;
+      departamento.innerHTML = `<div>${resultado.departamento}</div>`;
+      prioridad.innerHTML = `<div>${resultado.prioridad}</div>`;
+      nombre.innerHTML = `<div>${resultado.nombre}</div>`;
+      email.innerHTML = `<div>${resultado.email}</div>`;
+      detalle.innerHTML = `<div>${resultado.detalle}</div>`;
     } else {
       // Si no se encuentra la incidencia, mostrar un mensaje en el HTML
-      console.log("No se encontró la incidencia.");
-      asunto.textContent = "No se encontró la incidencia";
+      console.log("");
+      asunto.textContent = "No se Encontro la Incidencia!";
       estado.textContent = "";
       departamento.textContent = "";
       prioridad.textContent = "";
       nombre.textContent = "";
       email.textContent = "";
       detalle.textContent = "";
+
     }
   }
 
